@@ -1,0 +1,11 @@
+{
+  "alert_id": "DEMO-SQLI-001",
+  "timestamp": "2026-04-12T18:01:05Z",
+  "source_ip": "45.33.22.11",
+  "destination_ip": "10.0.5.5",
+  "event_type": "SQL Injection Attempt",
+  "severity": "High",
+  "payload": "10.0.5.5 - - [12/Apr/2026:18:01:05 +0000] \"GET /login.php?user=admin' OR '1'='1-- HTTP/1.1\" 200 4522 \"-\" \"sqlmap/1.7.2\"",
+  "expected_verdict": "Malicious",
+  "scenario_description": "Classic SQL injection with Boolean bypass ('1'='1) and sqlmap user-agent against /login.php."
+}

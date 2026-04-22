@@ -1,0 +1,11 @@
+{
+  "alert_id": "DEMO-C2-004",
+  "timestamp": "2026-04-12T02:47:33Z",
+  "source_ip": "10.0.2.15",
+  "destination_ip": "199.201.5.1",
+  "event_type": "C2 Callback",
+  "severity": "Critical",
+  "payload": "IDS ALERT: ET TROJAN Cobalt Strike Beacon Activity to 199.201.5.1 port 4444 — periodic beacon check_in every 60s; encrypted outbound; bytes=2.1MB duration=3600s",
+  "expected_verdict": "Malicious",
+  "scenario_description": "Internal host beaconing to external Cobalt Strike C2 server on Metasploit default port 4444 with periodic check-ins."
+}

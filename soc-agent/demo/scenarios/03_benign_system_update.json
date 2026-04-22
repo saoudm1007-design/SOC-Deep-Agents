@@ -1,0 +1,11 @@
+{
+  "alert_id": "DEMO-UPDATE-003",
+  "timestamp": "2026-04-12T08:15:22Z",
+  "source_ip": "10.0.0.5",
+  "destination_ip": "169.254.169.254",
+  "event_type": "System Update",
+  "severity": "Info",
+  "payload": "{\"eventSource\": \"yum\", \"eventName\": \"Update\", \"package\": \"kernel-3.10.0-1160\", \"status\": \"Success\", \"user\": \"root\", \"source\": \"windows_update scheduled_maintenance\"}",
+  "expected_verdict": "Benign",
+  "scenario_description": "Automatic kernel patch via package manager during scheduled maintenance window. Should be recognised as benign maintenance activity."
+}

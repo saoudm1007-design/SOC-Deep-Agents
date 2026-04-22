@@ -1,0 +1,130 @@
+{
+  "model": "cohere/command-r-08-2024",
+  "total_wall_time_s": 18.78,
+  "results": [
+    {
+      "id": "ALERT-001",
+      "true": "Benign",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"4bec04e2-03d5-48c5-84d4-ec3c644d9243\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-002",
+      "true": "Benign",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"3e10be82-d47e-4501-ab48-af9a04cf394d\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-003",
+      "true": "Benign",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"cbd7d7f4-d38f-40b5-b310-fd4ce83ae620\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-004",
+      "true": "Benign",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"36089eec-dfb4-4b08-bb88-34525d618021\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-005",
+      "true": "Benign",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"22f8f3cc-d691-4b11-8fba-676f4a486505\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-006",
+      "true": "Benign",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"459c3faf-406d-4d23-ba27-432762986ca3\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-007",
+      "true": "Benign",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"ef1eb4a1-bf14-4d2b-a059-dd90ac654efa\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-008",
+      "true": "Benign",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"5a48ecbf-0418-4583-a36a-423534e75261\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-009",
+      "true": "Benign",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"a98e6d57-f3c5-4f64-b806-4dd04724e7d9\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-010",
+      "true": "Benign",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"0ad58ea4-cd5a-4368-8ff1-ec4386e9dede\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-011",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.93,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-012",
+      "true": "Malicious",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"bece612c-79fb-4472-9254-f4df7a3feb10\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-013",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.9,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-014",
+      "true": "Malicious",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"bfd69f0a-f0fa-48e1-a579-b8cb1aa38e07\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-015",
+      "true": "Malicious",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"d0a7aaba-ea16-47d7-aff1-33b7f5ea5765\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-016",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.9,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-017",
+      "true": "Malicious",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"ec109a3a-a995-4719-a15e-8c4c4dd63deb\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-018",
+      "true": "Malicious",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"4d0f1f03-00a3-4116-b7e0-de40b6edf771\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    },
+    {
+      "id": "ALERT-019",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.93,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-020",
+      "true": "Malicious",
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"id\":\"5a49039e-afc9-4f97-975a-3f29fd2b6412\",\"message\":\"property path must have a type\"}', 'provider_name': 'Cohere', 'is_byok': False}}, 'user_id': 'user_3BhSoJoX81lOZ9P8nmHOwEvzBKN'}"
+    }
+  ]
+}

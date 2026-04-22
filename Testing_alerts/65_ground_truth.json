@@ -1,0 +1,392 @@
+[
+  {
+    "id": "EASY-001",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine SSH login by a known devops user during business hours using public key authentication."
+  },
+  {
+    "id": "EASY-002",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard load balancer health check against a backend application server."
+  },
+  {
+    "id": "EASY-003",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled Laravel artisan task runner executing on localhost via cron."
+  },
+  {
+    "id": "EASY-004",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard parameterized read query from an application to fetch active user records."
+  },
+  {
+    "id": "EASY-005",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled daily backup file transfer via rsync to the internal archive server."
+  },
+  {
+    "id": "EASY-006",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Marketing employee accessing a shared presentation file on the corporate file server."
+  },
+  {
+    "id": "EASY-007",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote engineer establishing a VPN session from a recognized ISP address."
+  },
+  {
+    "id": "EASY-008",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Automated Let's Encrypt certificate renewal for a company domain."
+  },
+  {
+    "id": "EASY-009",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User changing their own password through the self-service portal."
+  },
+  {
+    "id": "EASY-010",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web browsing request to the company website returning a successful response."
+  },
+  {
+    "id": "EASY-011",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SQL injection using UNION-based technique to extract credentials from the users table."
+  },
+  {
+    "id": "EASY-012",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Stored XSS attack using an img onerror handler to exfiltrate session cookies to an attacker-controlled server."
+  },
+  {
+    "id": "EASY-013",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "High-rate brute force attack against the root account with 300 attempts per minute."
+  },
+  {
+    "id": "EASY-014",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host establishing a reverse HTTPS Meterpreter shell to a known malicious C2 server."
+  },
+  {
+    "id": "EASY-015",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attack attempting to read the shadow password file containing hashed credentials."
+  },
+  {
+    "id": "EASY-016",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Volumetric SYN flood attack at 12,000 packets per second targeting the HTTPS service."
+  },
+  {
+    "id": "EASY-017",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Creation of a ransom note file by an unknown executable, classic ransomware behavior."
+  },
+  {
+    "id": "EASY-018",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Web shell upload via file upload endpoint, enabling arbitrary command execution on the server."
+  },
+  {
+    "id": "EASY-019",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Mimikatz accessing LSASS process memory to dump plaintext credentials."
+  },
+  {
+    "id": "EASY-020",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a known trojan binary masquerading as a system process."
+  },
+  {
+    "id": "MED-001",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Admin login at 3:15 AM using password authentication instead of the standard public key method. The unusual hour and weaker auth method suggest compromised credentials."
+  },
+  {
+    "id": "MED-002",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Large data transfer (8.5GB in 5 minutes) over SSH between two internal servers. While internal, this volume and speed over SSH suggests lateral movement or data staging."
+  },
+  {
+    "id": "MED-003",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Unbounded SELECT * query against the entire customers table returning 2.4M rows. A legitimate application would use pagination; this suggests data exfiltration reconnaissance."
+  },
+  {
+    "id": "MED-004",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Copying an executable to a remote host's admin share (C$) in the Windows Temp directory. This is a common lateral movement technique using administrative shares."
+  },
+  {
+    "id": "MED-005",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Standard DNS resolution for Microsoft Update services. The domain and response IP are legitimate Microsoft infrastructure."
+  },
+  {
+    "id": "MED-006",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "DevOps user restarting Nginx via sudo during business hours. This is a routine maintenance operation by an authorized user."
+  },
+  {
+    "id": "MED-007",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Access to the AWS EC2 instance metadata endpoint to retrieve IAM role credentials. While legitimate services do this, the direct HTTP request pattern (not via SDK) suggests SSRF exploitation."
+  },
+  {
+    "id": "MED-008",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "New service installed running as LocalSystem from a suspicious path (ProgramData) with a generic name mimicking Windows Update. Likely persistence mechanism."
+  },
+  {
+    "id": "MED-009",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Rapid enumeration of common administrative and sensitive paths indicates automated vulnerability scanning or reconnaissance activity."
+  },
+  {
+    "id": "MED-010",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Full /24 subnet ICMP sweep from an internal host in 2 seconds. This is network reconnaissance to discover live hosts for lateral movement."
+  },
+  {
+    "id": "MED-011",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Scheduled task created under a legitimate-looking path but pointing to a batch file in a public directory. The deceptive naming and Public folder location suggest persistence by an attacker."
+  },
+  {
+    "id": "MED-012",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Three failed password attempts from an internal IP during business hours. Likely a user mistyping their password, not a brute force attack."
+  },
+  {
+    "id": "MED-013",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Security audit log cleared by admin account. Clearing security logs is a classic anti-forensics technique to cover tracks after a compromise."
+  },
+  {
+    "id": "MED-014",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "TLS 1.3 connection to Microsoft's Azure AD login service. This is standard enterprise authentication traffic."
+  },
+  {
+    "id": "MED-015",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Adding an executable to the Run registry key for persistence. The process being cmd.exe (not an installer) and the ProgramData path are suspicious."
+  },
+  {
+    "id": "MED-016",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Standard transactional INSERT into the orders table with properly parameterized values. Normal e-commerce activity."
+  },
+  {
+    "id": "MED-017",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Admin creating a new service account for backup operations with appropriate group memberships during business hours."
+  },
+  {
+    "id": "MED-018",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "PowerShell script auditing Active Directory for inactive users (no login in 90 days) and exporting to CSV. This is a standard IT housekeeping task."
+  },
+  {
+    "id": "MED-019",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on port 4444, the default Metasploit handler port. This strongly suggests a reverse shell callback."
+  },
+  {
+    "id": "MED-020",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "cmd.exe spawned by Microsoft Word executing reconnaissance commands (whoami, net localgroup, ipconfig). This is a strong indicator of a malicious macro or exploit."
+  },
+  {
+    "id": "HARD-001",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Although formatted as a routine cron job, it pipes a remote script directly into bash. The internal IP 10.0.99.5 on port 8080 is not a standard update server, and piping curl to bash allows arbitrary code execution without verification."
+  },
+  {
+    "id": "HARD-002",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Despite being executed by a legitimate service account, the query selects sensitive fields (password_hash, security answers) with a tautological WHERE 1=1 clause returning all 45,000 rows. Legitimate applications never need to bulk-extract password hashes."
+  },
+  {
+    "id": "HARD-003",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Using WMI to remotely create a backdoor admin account on another host. Although executed by a deployment service account, creating users with weak passwords and adding them to administrators is not legitimate deployment behavior."
+  },
+  {
+    "id": "HARD-004",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "The www-data user (web server process) installing nmap, a network scanning tool. Web application service accounts should never install packages, especially offensive security tools."
+  },
+  {
+    "id": "HARD-005",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "While DNS-over-HTTPS to Google is normal, the consistent 450-byte POST requests every 30 seconds for 2 hours indicate a beacon pattern. Legitimate DoH queries vary in size and frequency. This is likely C2 traffic masquerading as DoH."
+  },
+  {
+    "id": "HARD-006",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "The www-data (web server) user adding an SSH authorized key to the root account. This is a privilege escalation and persistence technique\u2014a web process should never modify root's SSH keys."
+  },
+  {
+    "id": "HARD-007",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Hijacking a legitimate Windows Update scheduled task by appending an additional executable. The original task path is preserved to avoid suspicion, but a secondary payload is chained via &&."
+  },
+  {
+    "id": "HARD-008",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Using certutil as a LOLBin (Living off the Land Binary) to download a file. Despite the innocent-looking domain and filename (font file), certutil -urlcache is a well-known technique for downloading malicious payloads while evading detection."
+  },
+  {
+    "id": "HARD-009",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kerberos TGS request using RC4-HMAC encryption for the krbtgt service. Modern environments use AES256. RC4 requests for krbtgt are a hallmark of a Golden Ticket or Kerberoasting attack."
+  },
+  {
+    "id": "HARD-010",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Using rundll32 to call comsvcs.dll MiniDump function\u2014this is a known technique to dump LSASS memory (PID 624) without needing Mimikatz. The dump file can be exfiltrated and parsed offline for credentials."
+  },
+  {
+    "id": "HARD-011",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "A kernel driver being dropped into the System32 drivers directory by sc.exe. This could be a rootkit installation. Legitimate driver installations go through proper Windows installer mechanisms, not direct file creation via sc.exe."
+  },
+  {
+    "id": "HARD-012",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "API call exports 50,000 user records using a JWT token where the role claim shows 'user' but accessing an admin endpoint. The JWT may have been tampered with (alg confusion or secret compromise) to elevate privileges."
+  },
+  {
+    "id": "HARD-013",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Privileged Docker container with host PID and network namespaces downloading and executing a remote script. The --privileged flag with host namespace access enables full container escape to the host OS."
+  },
+  {
+    "id": "HARD-014",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Modifying the admin account's email address via a migration service account. This enables password reset takeover\u2014the attacker changes the recovery email, then uses 'forgot password' to gain admin access."
+  },
+  {
+    "id": "HARD-015",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "MSBuild executing a project file from the Public Documents folder, launched by explorer.exe (not Visual Studio). MSBuild is a known LOLBin for executing arbitrary C# code embedded in .csproj files to bypass application whitelisting."
+  },
+  {
+    "id": "HARD-016",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Adding pam_permit.so (which always succeeds) before the real authentication module in the SSH PAM stack. This creates a backdoor allowing any password to authenticate via SSH."
+  },
+  {
+    "id": "HARD-017",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PowerShell reading a confidential file, Base64 encoding it, and uploading to a public paste service. This is a data exfiltration technique using a legitimate web service to avoid triggering traditional DLP rules."
+  },
+  {
+    "id": "HARD-018",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Cloning the company's infrastructure repository into a hidden directory disguised as a font cache (/tmp/.cache/fonts/). The deploy user is hiding source code or infrastructure-as-code in an innocuous path for exfiltration."
+  },
+  {
+    "id": "HARD-019",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Enabling WDigest credential caching in the registry. This forces Windows to store plaintext passwords in memory, which can then be harvested by tools like Mimikatz. This setting was disabled by default for security."
+  },
+  {
+    "id": "HARD-020",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "SSH configuration weakened across three critical parameters: enabling root login, enabling password auth (from key-only), and raising max auth tries to 99. This opens the server to brute force attacks and is a common post-compromise persistence technique."
+  },
+  {
+    "id": "HARD-021",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certutil invoked by svchost.exe to verify and update the Windows root certificate trust list (AuthRoot). This is a legitimate Windows automatic root certificate update mechanism, not the -urlcache download technique used by attackers."
+  },
+  {
+    "id": "HARD-022",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Scheduled security hygiene script using stored credentials to remotely disable AD accounts with passwords older than 180 days. Despite running at 2 AM with remote sessions and credential usage, this is a standard IT security automation task with proper credential management."
+  },
+  {
+    "id": "HARD-023",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Log rotation by a dedicated log management service account that archives logs before clearing. The immediate archive event confirms this is automated log lifecycle management, not anti-forensics. The Application log (not Security) and the dedicated service account further support legitimacy."
+  },
+  {
+    "id": "HARD-024",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Scheduled vulnerability scan by the Qualys scanner appliance performing authorized port enumeration across the subnet. The User-Agent identifies the legitimate enterprise vulnerability management tool, and the scan covers standard service ports consistent with a compliance assessment."
+  },
+  {
+    "id": "HARD-025",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Application credential refresher accessing EC2 instance metadata via IMDSv2 (token-based, not the insecure v1). The dedicated process path, service account, and use of the secure metadata token endpoint indicate legitimate AWS SDK credential rotation, not SSRF exploitation."
+  }
+]

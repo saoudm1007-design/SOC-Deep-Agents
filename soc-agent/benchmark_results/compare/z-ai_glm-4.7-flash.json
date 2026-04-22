@@ -1,0 +1,226 @@
+{
+  "model": "z-ai/glm-4.7-flash",
+  "total_wall_time_s": 920.38,
+  "results": [
+    {
+      "id": "ALERT-001",
+      "true": "Benign",
+      "pred": "Suspicious",
+      "confidence": 0.4,
+      "elapsed_s": 45.3,
+      "correct": false,
+      "input_tokens": 14396,
+      "output_tokens": 942,
+      "cache_read": 84
+    },
+    {
+      "id": "ALERT-002",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.95,
+      "elapsed_s": 36.95,
+      "correct": true,
+      "input_tokens": 29388,
+      "output_tokens": 1512,
+      "cache_read": 21760
+    },
+    {
+      "id": "ALERT-003",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.85,
+      "elapsed_s": 56.62,
+      "correct": true,
+      "input_tokens": 44814,
+      "output_tokens": 1815,
+      "cache_read": 43904
+    },
+    {
+      "id": "ALERT-004",
+      "true": "Benign",
+      "pred": "Suspicious",
+      "confidence": 0.6,
+      "elapsed_s": 49.97,
+      "correct": false,
+      "input_tokens": 37118,
+      "output_tokens": 2736,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-005",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.95,
+      "elapsed_s": 50.98,
+      "correct": true,
+      "input_tokens": 29474,
+      "output_tokens": 1084,
+      "cache_read": 28800
+    },
+    {
+      "id": "ALERT-006",
+      "true": "Benign",
+      "pred": "Suspicious",
+      "confidence": 0.4,
+      "elapsed_s": 48.47,
+      "correct": false,
+      "input_tokens": 14407,
+      "output_tokens": 1281,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-007",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.95,
+      "elapsed_s": 51.03,
+      "correct": true,
+      "input_tokens": 28822,
+      "output_tokens": 1357,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-008",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.95,
+      "elapsed_s": 90.45,
+      "correct": true,
+      "input_tokens": 29969,
+      "output_tokens": 1576,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-009",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.95,
+      "elapsed_s": 50.47,
+      "correct": true,
+      "input_tokens": 14202,
+      "output_tokens": 702,
+      "cache_read": 42
+    },
+    {
+      "id": "ALERT-010",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.95,
+      "elapsed_s": 50.05,
+      "correct": true,
+      "input_tokens": 36698,
+      "output_tokens": 2300,
+      "cache_read": 21696
+    },
+    {
+      "id": "ALERT-011",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.93,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-012",
+      "true": "Malicious",
+      "pred": "Suspicious",
+      "confidence": 0.85,
+      "elapsed_s": 77.86,
+      "correct": true,
+      "input_tokens": 37858,
+      "output_tokens": 2620,
+      "cache_read": 29447
+    },
+    {
+      "id": "ALERT-013",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.9,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-014",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.95,
+      "elapsed_s": 53.71,
+      "correct": true,
+      "input_tokens": 22395,
+      "output_tokens": 1199,
+      "cache_read": 17178
+    },
+    {
+      "id": "ALERT-015",
+      "true": "Malicious",
+      "pred": "Benign",
+      "confidence": 0.85,
+      "elapsed_s": 99.3,
+      "correct": false,
+      "input_tokens": 29589,
+      "output_tokens": 1367,
+      "cache_read": 84
+    },
+    {
+      "id": "ALERT-016",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.9,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-017",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.95,
+      "elapsed_s": 84.5,
+      "correct": true,
+      "input_tokens": 38652,
+      "output_tokens": 4042,
+      "cache_read": 37376
+    },
+    {
+      "id": "ALERT-018",
+      "true": "Malicious",
+      "pred": "Suspicious",
+      "confidence": 0.4,
+      "elapsed_s": 31.67,
+      "correct": true,
+      "input_tokens": 37881,
+      "output_tokens": 2427,
+      "cache_read": 36928
+    },
+    {
+      "id": "ALERT-019",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.93,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-020",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.95,
+      "elapsed_s": 43.06,
+      "correct": true,
+      "input_tokens": 37994,
+      "output_tokens": 2184,
+      "cache_read": 29440
+    }
+  ]
+}

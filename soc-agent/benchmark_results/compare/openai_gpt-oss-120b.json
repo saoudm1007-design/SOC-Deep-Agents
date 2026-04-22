@@ -1,0 +1,220 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "total_wall_time_s": 734.81,
+  "results": [
+    {
+      "id": "ALERT-001",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.85,
+      "elapsed_s": 25.63,
+      "correct": true,
+      "input_tokens": 33790,
+      "output_tokens": 2471,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-002",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.92,
+      "elapsed_s": 12.34,
+      "correct": true,
+      "input_tokens": 27052,
+      "output_tokens": 1381,
+      "cache_read": 13184
+    },
+    {
+      "id": "ALERT-003",
+      "true": "Benign",
+      "pred": "Suspicious",
+      "confidence": 0.68,
+      "elapsed_s": 43.64,
+      "correct": false,
+      "input_tokens": 34170,
+      "output_tokens": 2169,
+      "cache_read": 13056
+    },
+    {
+      "id": "ALERT-004",
+      "true": "Benign",
+      "pred": "Suspicious",
+      "confidence": 0.62,
+      "elapsed_s": 14.87,
+      "correct": false,
+      "input_tokens": 27179,
+      "output_tokens": 1625,
+      "cache_read": 19712
+    },
+    {
+      "id": "ALERT-005",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.85,
+      "elapsed_s": 37.38,
+      "correct": true,
+      "input_tokens": 27424,
+      "output_tokens": 1847,
+      "cache_read": 13056
+    },
+    {
+      "id": "ALERT-006",
+      "true": "Benign",
+      "pred": "Suspicious",
+      "confidence": 0.4,
+      "elapsed_s": 21.09,
+      "correct": false,
+      "input_tokens": 13129,
+      "output_tokens": 551,
+      "cache_read": 6528
+    },
+    {
+      "id": "ALERT-007",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.85,
+      "elapsed_s": 16.76,
+      "correct": true,
+      "input_tokens": 26885,
+      "output_tokens": 1321,
+      "cache_read": 19712
+    },
+    {
+      "id": "ALERT-008",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.9,
+      "elapsed_s": 12.68,
+      "correct": true,
+      "input_tokens": 34840,
+      "output_tokens": 1641,
+      "cache_read": 20224
+    },
+    {
+      "id": "ALERT-009",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.85,
+      "elapsed_s": 0.87,
+      "correct": true,
+      "input_tokens": 6606,
+      "output_tokens": 565,
+      "cache_read": 6528
+    },
+    {
+      "id": "ALERT-010",
+      "true": "Benign",
+      "pred": "Benign",
+      "confidence": 0.88,
+      "elapsed_s": 25.2,
+      "correct": true,
+      "input_tokens": 20027,
+      "output_tokens": 1575,
+      "cache_read": 6528
+    },
+    {
+      "id": "ALERT-011",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.93,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-012",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.78,
+      "elapsed_s": 36.11,
+      "correct": true,
+      "input_tokens": 60031,
+      "output_tokens": 1313,
+      "cache_read": 6528
+    },
+    {
+      "id": "ALERT-013",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.9,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-014",
+      "true": "Malicious",
+      "pred": "Suspicious",
+      "confidence": 0.86,
+      "elapsed_s": 273.19,
+      "correct": true,
+      "input_tokens": 36781,
+      "output_tokens": 1364,
+      "cache_read": 19840
+    },
+    {
+      "id": "ALERT-015",
+      "true": "Malicious",
+      "error": "ValidationError: 1 validation error for AIMessage\ntool_calls.0.args\n  Input should be a valid dictionary [type=dict_type, input_value=[{'description': 'Investi...': 'log_payload_agent'}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/dict_type"
+    },
+    {
+      "id": "ALERT-016",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.9,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-017",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.85,
+      "elapsed_s": 96.79,
+      "correct": true,
+      "input_tokens": 28089,
+      "output_tokens": 1448,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-018",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.97,
+      "elapsed_s": 76.92,
+      "correct": true,
+      "input_tokens": 13653,
+      "output_tokens": 2969,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-019",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.93,
+      "elapsed_s": 0.0,
+      "correct": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read": 0
+    },
+    {
+      "id": "ALERT-020",
+      "true": "Malicious",
+      "pred": "Malicious",
+      "confidence": 0.86,
+      "elapsed_s": 24.31,
+      "correct": true,
+      "input_tokens": 13301,
+      "output_tokens": 1104,
+      "cache_read": 0
+    }
+  ]
+}

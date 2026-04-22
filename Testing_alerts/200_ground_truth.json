@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "ALERT-001",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access authentication logs."
+  },
+  {
+    "id": "ALERT-002",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User oibrahim changed their own password through self-service."
+  },
+  {
+    "id": "ALERT-003",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-004",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "ALERT-005",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-006",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting (XSS) payload attempting to inject a script tag to steal session cookies."
+  },
+  {
+    "id": "ALERT-007",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "SSH configuration weakened across three critical parameters: enabling root login, enabling password auth (from key-only), and raising max auth tries to 99. This opens the server to brute force attacks and is a common post-compromise persistence technique."
+  },
+  {
+    "id": "ALERT-008",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "ALERT-009",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "ALERT-010",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "XML-RPC command execution attempt."
+  },
+  {
+    "id": "ALERT-011",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "ALERT-012",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "ALERT-013",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for published content."
+  },
+  {
+    "id": "ALERT-014",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 7500 packets/sec targeting port 80."
+  },
+  {
+    "id": "ALERT-015",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "ALERT-016",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container stopped for the batch worker service."
+  },
+  {
+    "id": "ALERT-017",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a backdoor disguised as an invoice at C:\\Users\\admin\\Downloads\\invoice.exe."
+  },
+  {
+    "id": "ALERT-018",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Attacker attempting to traverse directories to access sensitive system configuration files."
+  },
+  {
+    "id": "ALERT-019",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "ALERT-020",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "ALERT-021",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "ALERT-022",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User asmith changed their own password through self-service."
+  },
+  {
+    "id": "ALERT-023",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "ALERT-024",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certbot generating a new CSR (Certificate Signing Request) for TLS certificate renewal. The standard SSL paths and certbot executor confirm legitimate certificate lifecycle management."
+  },
+  {
+    "id": "ALERT-025",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "ALERT-026",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "CrowdStrike Falcon endpoint security agent being added to auto-start via MSI installer. The Program Files installation path, legitimate vendor name, and msiexec parent process confirm this is an authorized security tool deployment."
+  },
+  {
+    "id": "ALERT-027",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline copying a versioned release artifact to production. The CI runner source, semantic versioning, and releases directory indicate a standard deployment."
+  },
+  {
+    "id": "ALERT-028",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "ALERT-029",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Automated TLS certificate renewal for app.company.com."
+  },
+  {
+    "id": "ALERT-030",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "A kernel driver being dropped into the System32 drivers directory by sc.exe. This could be a rootkit installation. Legitimate driver installations go through proper Windows installer mechanisms, not direct file creation via sc.exe."
+  },
+  {
+    "id": "ALERT-031",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "External port scan from 185.220.101.5 probing 9 ports in 1s."
+  },
+  {
+    "id": "ALERT-032",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Direct root login at 3:45 AM using password authentication. Root SSH login should be disabled; this suggests compromised credentials and policy violation."
+  },
+  {
+    "id": "ALERT-033",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 8000 packets/sec targeting port 443."
+  },
+  {
+    "id": "ALERT-034",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-035",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Using WMI to remotely create a backdoor admin account on another host. Although executed by a deployment service account, creating users with weak passwords and adding them to administrators is not legitimate deployment behavior."
+  },
+  {
+    "id": "ALERT-036",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "ALERT-037",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for pending order count."
+  },
+  {
+    "id": "ALERT-038",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "External port scan from 77.247.181.162 probing 7 ports in 2s."
+  },
+  {
+    "id": "ALERT-039",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legal team member accessing an NDA template on the file server."
+  },
+  {
+    "id": "ALERT-040",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "On-call engineer logging in at 2 AM during an incident response. Public key auth and the oncall username indicate this is legitimate after-hours access."
+  },
+  {
+    "id": "ALERT-041",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SQL injection attempt using Boolean-based blind injection in the user parameter."
+  },
+  {
+    "id": "ALERT-042",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "ALERT-043",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access process environment variables."
+  },
+  {
+    "id": "ALERT-044",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Rapid enumeration of common administrative and sensitive paths indicates automated vulnerability scanning or reconnaissance activity."
+  },
+  {
+    "id": "ALERT-045",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "ALERT-046",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "ALERT-047",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "ALERT-048",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "ALERT-049",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "ALERT-050",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PowerShell AMSI bypass using reflection to set amsiInitFailed flag. The string concatenation ('Am'+'siUtils') is specifically designed to evade static detection of the AMSI tampering. This disables script-based malware scanning."
+  },
+  {
+    "id": "ALERT-051",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "ALERT-052",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "ALERT-053",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Template Injection (SSTI) for command execution."
+  },
+  {
+    "id": "ALERT-054",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard DNS resolution for Jenkins updates."
+  },
+  {
+    "id": "ALERT-055",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "ALERT-056",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Massive volume of SYN packets attempting to exhaust server resources (Denial of Service)."
+  },
+  {
+    "id": "ALERT-057",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard parameterized read query from an application to fetch active user records."
+  },
+  {
+    "id": "ALERT-058",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Rapid succession of failed login attempts indicating a dictionary or brute force attack."
+  },
+  {
+    "id": "ALERT-059",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-060",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "ALERT-061",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "DBA performing a production database backup using pg_dump via sudo. The output path and command are consistent with routine backup procedures."
+  },
+  {
+    "id": "ALERT-062",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Setting cmd.exe as the debugger for sethc.exe (Sticky Keys). This is a well-known accessibility feature backdoor that provides a SYSTEM command prompt at the login screen."
+  },
+  {
+    "id": "ALERT-063",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "ALERT-064",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Security operations team creating an organization-wide CloudTrail with log validation enabled. This strengthens audit capabilities and is a security best practice, not an attacker action."
+  },
+  {
+    "id": "ALERT-065",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "High-frequency DNS TXT queries with random-looking subdomains to a suspicious domain returning NXDOMAIN. This pattern matches DNS tunneling used for data exfiltration or C2 communication."
+  },
+  {
+    "id": "ALERT-066",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "ALERT-067",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "ALERT-068",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "ALERT-069",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /contact returning a successful response."
+  },
+  {
+    "id": "ALERT-070",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User rpatel changed their own password through self-service."
+  },
+  {
+    "id": "ALERT-071",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access /etc/passwd via URL encoding."
+  },
+  {
+    "id": "ALERT-072",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-073",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Executive assistant accessing a board presentation on the file server."
+  },
+  {
+    "id": "ALERT-074",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "WPAD resolution falling through to a non-authoritative response from an unexpected host. This indicates WPAD poisoning via LLMNR/NBT-NS, allowing an attacker to intercept HTTP traffic as a man-in-the-middle proxy."
+  },
+  {
+    "id": "ALERT-075",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against postgres account with 250 attempts in 40s."
+  },
+  {
+    "id": "ALERT-076",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certutil invoked by svchost.exe to verify and update the Windows root certificate trust list (AuthRoot). This is a legitimate Windows automatic root certificate update mechanism, not the -urlcache download technique used by attackers."
+  },
+  {
+    "id": "ALERT-077",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "ALERT-078",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "ALERT-079",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-080",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via IcedID."
+  },
+  {
+    "id": "ALERT-081",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "ALERT-082",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ptrace PTRACE_ATTACH syscall targeting PID 1 (init/systemd) from a non-root user's custom strace binary. Attaching to PID 1 enables process memory manipulation for privilege escalation or rootkit installation."
+  },
+  {
+    "id": "ALERT-083",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "ALERT-084",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "ALERT-085",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "ALERT-086",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 5500 packets/sec targeting port 80."
+  },
+  {
+    "id": "ALERT-087",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "ALERT-088",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for confirmed subscribers."
+  },
+  {
+    "id": "ALERT-089",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "ALERT-090",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "ALERT-091",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "ALERT-092",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Standard transactional INSERT into the orders table with properly parameterized values. Normal e-commerce activity."
+  },
+  {
+    "id": "ALERT-093",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Although formatted as a routine cron job, it pipes a remote script directly into bash. The internal IP 10.0.99.5 on port 8080 is not a standard update server, and piping curl to bash allows arbitrary code execution without verification."
+  },
+  {
+    "id": "ALERT-094",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting attempt using iframe injection to embed a phishing page."
+  },
+  {
+    "id": "ALERT-095",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "ALERT-096",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Trivy container vulnerability scanner performing a nightly image scan in read-only mode. Aqua Security's Trivy is a legitimate security tool, and the read-only flag confirms no write access to the host."
+  },
+  {
+    "id": "ALERT-097",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "ALERT-098",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legitimate outbound HTTP traffic permitted by firewall rule."
+  },
+  {
+    "id": "ALERT-099",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PowerShell profile.ps1 created/modified in the system-wide profile directory. This file executes automatically every time any user launches PowerShell, providing persistent code execution. The notepad.exe parent suggests manual attacker editing."
+  },
+  {
+    "id": "ALERT-100",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "ALERT-101",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote employee successfully connecting to the corporate VPN from a recognized ISP."
+  },
+  {
+    "id": "ALERT-102",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "ALERT-103",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "ALERT-104",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a rootkit DLL in ProgramData at C:\\ProgramData\\update.dll."
+  },
+  {
+    "id": "ALERT-105",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kerberos TGS request using RC4-HMAC encryption for the krbtgt service. Modern environments use AES256. RC4 requests for krbtgt are a hallmark of a Golden Ticket or Kerberoasting attack."
+  },
+  {
+    "id": "ALERT-106",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a backdoor disguised as an invoice at C:\\Users\\admin\\Downloads\\invoice.exe."
+  },
+  {
+    "id": "ALERT-107",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Marketing employee accessing brand guidelines on the file server."
+  },
+  {
+    "id": "ALERT-108",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "ALERT-109",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-110",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User lchen changed their own password through self-service."
+  },
+  {
+    "id": "ALERT-111",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "ALERT-112",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "A low-privileged service account suddenly adding itself to the sudoers group, indicating successful privilege escalation."
+  },
+  {
+    "id": "ALERT-113",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-114",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "ALERT-115",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container started for the monitoring service."
+  },
+  {
+    "id": "ALERT-116",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Automatic system kernel patch initiated by the root user via package manager."
+  },
+  {
+    "id": "ALERT-117",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-118",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspiciously long DNS subdomains containing what looks like chunks of data, suggesting data exfiltration via DNS protocol."
+  },
+  {
+    "id": "ALERT-119",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Endpoint security agent quarantining or logging a detection in its own managed directory. The security vendor process writing to its own ProgramData subdirectory is standard anti-malware behavior."
+  },
+  {
+    "id": "ALERT-120",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "ALERT-121",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "MSHTA spawned by Outlook executing VBScript that launches a hidden PowerShell reverse shell. This is a living-off-the-land phishing exploit chain using a legitimate Office process to evade detection."
+  },
+  {
+    "id": "ALERT-122",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled weekly backup job transferring large data volume to the internal backup server."
+  },
+  {
+    "id": "ALERT-123",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "ALERT-124",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "ALERT-125",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container started for the database replica service."
+  },
+  {
+    "id": "ALERT-126",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against ubuntu account with 350 attempts in 45s."
+  },
+  {
+    "id": "ALERT-127",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "2.5GB uploaded to an external IP over 3 minutes on port 443. The high outbound volume to an unknown external host indicates likely data exfiltration."
+  },
+  {
+    "id": "ALERT-128",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Volumetric SYN flood attack at 12,000 packets per second targeting the HTTPS service."
+  },
+  {
+    "id": "ALERT-129",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "ALERT-130",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting attempt using Base64 encoded eval to redirect to malicious site."
+  },
+  {
+    "id": "ALERT-131",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "ALERT-132",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Splunk Universal Forwarder updating its Windows Technology Add-on input configuration. The Splunk installation path and its own service process modifying its own config files is standard SIEM agent behavior."
+  },
+  {
+    "id": "ALERT-133",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Ransomware indicator: ransom note on admin desktop."
+  },
+  {
+    "id": "ALERT-134",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "MSBuild executing a project file from the Public Documents folder, launched by explorer.exe (not Visual Studio). MSBuild is a known LOLBin for executing arbitrary C# code embedded in .csproj files to bypass application whitelisting."
+  },
+  {
+    "id": "ALERT-135",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard load balancer health check on /ready endpoint."
+  },
+  {
+    "id": "ALERT-136",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "ALERT-137",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "ALERT-138",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Using certutil as a LOLBin (Living off the Land Binary) to download a file. Despite the innocent-looking domain and filename (font file), certutil -urlcache is a well-known technique for downloading malicious payloads while evading detection."
+  },
+  {
+    "id": "ALERT-139",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for performance metrics."
+  },
+  {
+    "id": "ALERT-140",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine package update of postgresql15-15.4 via yum."
+  },
+  {
+    "id": "ALERT-141",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "ALERT-142",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "ALERT-143",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "ALERT-144",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "ALERT-145",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "An intern account making the production S3 data bucket publicly readable. Setting Principal to '*' with GetObject exposes all objects to the internet\u2014either a severe misconfiguration or intentional data exposure."
+  },
+  {
+    "id": "ALERT-146",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "ALERT-147",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User mlopez changed their own password through self-service."
+  },
+  {
+    "id": "ALERT-148",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access /etc/passwd via URL encoding."
+  },
+  {
+    "id": "ALERT-149",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "ALERT-150",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "ALERT-151",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting attempt using form action hijack to steal form submissions."
+  },
+  {
+    "id": "ALERT-152",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "ALERT-153",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Ansible playbook applying an iptables rule to block traffic from a subnet. The ansible-playbook parent process and Python executor confirm this is infrastructure-as-code configuration management, not manual firewall manipulation."
+  },
+  {
+    "id": "ALERT-154",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "ALERT-155",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container started for the database replica service."
+  },
+  {
+    "id": "ALERT-156",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PowerShell reading a confidential file, Base64 encoding it, and uploading to a public paste service. This is a data exfiltration technique using a legitimate web service to avoid triggering traditional DLP rules."
+  },
+  {
+    "id": "ALERT-157",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "ALERT-158",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on port 4444, the default Metasploit handler port. This strongly suggests a reverse shell callback."
+  },
+  {
+    "id": "ALERT-159",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "ALERT-160",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Ransomware indicator: HTA ransom note with payment instructions."
+  },
+  {
+    "id": "ALERT-161",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "ALERT-162",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "ALERT-163",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "ALERT-164",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /about returning a successful response."
+  },
+  {
+    "id": "ALERT-165",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled temp file cleanup task running on localhost."
+  },
+  {
+    "id": "ALERT-166",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "ALERT-167",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled daily backup file transfer via rsync to the internal archive server."
+  },
+  {
+    "id": "ALERT-168",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "ALERT-169",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote HR specialist connecting via VPN from a recognized location."
+  },
+  {
+    "id": "ALERT-170",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "A standard user encountering a broken link or typo on a harmless image resource."
+  },
+  {
+    "id": "ALERT-171",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SQL injection attempt using schema enumeration in the category parameter."
+  },
+  {
+    "id": "ALERT-172",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "ALERT-173",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SQL injection attempt using UNION-based extraction in the id parameter."
+  },
+  {
+    "id": "ALERT-174",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "ALERT-175",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "ALERT-176",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine SSH public key login by sysadmin during business hours."
+  },
+  {
+    "id": "ALERT-177",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "ALERT-178",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Automated TLS certificate renewal for portal.company.com."
+  },
+  {
+    "id": "ALERT-179",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Mimikatz accessing LSASS process memory to dump plaintext credentials."
+  },
+  {
+    "id": "ALERT-180",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "JSP web shell upload enabling arbitrary command execution."
+  },
+  {
+    "id": "ALERT-181",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine SSH login by a known devops user during business hours using public key authentication."
+  },
+  {
+    "id": "ALERT-182",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "ALERT-183",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Scheduled task created under a legitimate-looking path but pointing to a batch file in a public directory. The deceptive naming and Public folder location suggest persistence by an attacker."
+  },
+  {
+    "id": "ALERT-184",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "ALERT-185",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-186",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Lambda function assuming the AdminFullAccess role. Legitimate Lambda functions use least-privilege roles. A Lambda assuming full admin is likely a compromised or injected function escalating privileges within the AWS environment."
+  },
+  {
+    "id": "ALERT-187",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "ALERT-188",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "ALERT-189",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "ALERT-190",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "ALERT-191",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Classic SQL injection pattern using Boolean logic to bypass authentication in the URL parameters."
+  },
+  {
+    "id": "ALERT-192",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "ALERT-193",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "ALERT-194",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "ALERT-195",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Endpoint security agent quarantining or logging a detection in its own managed directory. The security vendor process writing to its own ProgramData subdirectory is standard anti-malware behavior."
+  },
+  {
+    "id": "ALERT-196",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "LaZagne accessing LSASS to dump credentials from memory."
+  },
+  {
+    "id": "ALERT-197",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Auto-forward rule on the HR admin mailbox sending all email to an external Protonmail address. This is a classic Business Email Compromise (BEC) persistence technique to intercept sensitive HR communications."
+  },
+  {
+    "id": "ALERT-198",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "ALERT-199",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "ALERT-200",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  }
+]

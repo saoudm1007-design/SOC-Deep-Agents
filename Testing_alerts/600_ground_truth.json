@@ -1,0 +1,3602 @@
+[
+  {
+    "id": "EASY-001",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine SSH login by a known devops user during business hours using public key authentication."
+  },
+  {
+    "id": "EASY-002",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard load balancer health check against a backend application server."
+  },
+  {
+    "id": "EASY-003",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled Laravel artisan task runner executing on localhost via cron."
+  },
+  {
+    "id": "EASY-004",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard parameterized read query from an application to fetch active user records."
+  },
+  {
+    "id": "EASY-005",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled daily backup file transfer via rsync to the internal archive server."
+  },
+  {
+    "id": "EASY-006",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Marketing employee accessing a shared presentation file on the corporate file server."
+  },
+  {
+    "id": "EASY-007",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote engineer establishing a VPN session from a recognized ISP address."
+  },
+  {
+    "id": "EASY-008",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Automated Let's Encrypt certificate renewal for a company domain."
+  },
+  {
+    "id": "EASY-009",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User changing their own password through the self-service portal."
+  },
+  {
+    "id": "EASY-010",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web browsing request to the company website returning a successful response."
+  },
+  {
+    "id": "EASY-011",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SQL injection using UNION-based technique to extract credentials from the users table."
+  },
+  {
+    "id": "EASY-012",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Stored XSS attack using an img onerror handler to exfiltrate session cookies to an attacker-controlled server."
+  },
+  {
+    "id": "EASY-013",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "High-rate brute force attack against the root account with 300 attempts per minute."
+  },
+  {
+    "id": "EASY-014",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host establishing a reverse HTTPS Meterpreter shell to a known malicious C2 server."
+  },
+  {
+    "id": "EASY-015",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attack attempting to read the shadow password file containing hashed credentials."
+  },
+  {
+    "id": "EASY-016",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Volumetric SYN flood attack at 12,000 packets per second targeting the HTTPS service."
+  },
+  {
+    "id": "EASY-017",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Creation of a ransom note file by an unknown executable, classic ransomware behavior."
+  },
+  {
+    "id": "EASY-018",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Web shell upload via file upload endpoint, enabling arbitrary command execution on the server."
+  },
+  {
+    "id": "EASY-019",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Mimikatz accessing LSASS process memory to dump plaintext credentials."
+  },
+  {
+    "id": "EASY-020",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a known trojan binary masquerading as a system process."
+  },
+  {
+    "id": "MED-001",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Admin login at 3:15 AM using password authentication instead of the standard public key method. The unusual hour and weaker auth method suggest compromised credentials."
+  },
+  {
+    "id": "MED-002",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Large data transfer (8.5GB in 5 minutes) over SSH between two internal servers. While internal, this volume and speed over SSH suggests lateral movement or data staging."
+  },
+  {
+    "id": "MED-003",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Unbounded SELECT * query against the entire customers table returning 2.4M rows. A legitimate application would use pagination; this suggests data exfiltration reconnaissance."
+  },
+  {
+    "id": "MED-004",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Copying an executable to a remote host's admin share (C$) in the Windows Temp directory. This is a common lateral movement technique using administrative shares."
+  },
+  {
+    "id": "MED-005",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Standard DNS resolution for Microsoft Update services. The domain and response IP are legitimate Microsoft infrastructure."
+  },
+  {
+    "id": "MED-006",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "DevOps user restarting Nginx via sudo during business hours. This is a routine maintenance operation by an authorized user."
+  },
+  {
+    "id": "MED-007",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Access to the AWS EC2 instance metadata endpoint to retrieve IAM role credentials. While legitimate services do this, the direct HTTP request pattern (not via SDK) suggests SSRF exploitation."
+  },
+  {
+    "id": "MED-008",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "New service installed running as LocalSystem from a suspicious path (ProgramData) with a generic name mimicking Windows Update. Likely persistence mechanism."
+  },
+  {
+    "id": "MED-009",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Rapid enumeration of common administrative and sensitive paths indicates automated vulnerability scanning or reconnaissance activity."
+  },
+  {
+    "id": "MED-010",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Full /24 subnet ICMP sweep from an internal host in 2 seconds. This is network reconnaissance to discover live hosts for lateral movement."
+  },
+  {
+    "id": "MED-011",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Scheduled task created under a legitimate-looking path but pointing to a batch file in a public directory. The deceptive naming and Public folder location suggest persistence by an attacker."
+  },
+  {
+    "id": "MED-012",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Three failed password attempts from an internal IP during business hours. Likely a user mistyping their password, not a brute force attack."
+  },
+  {
+    "id": "MED-013",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Security audit log cleared by admin account. Clearing security logs is a classic anti-forensics technique to cover tracks after a compromise."
+  },
+  {
+    "id": "MED-014",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "TLS 1.3 connection to Microsoft's Azure AD login service. This is standard enterprise authentication traffic."
+  },
+  {
+    "id": "MED-015",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Adding an executable to the Run registry key for persistence. The process being cmd.exe (not an installer) and the ProgramData path are suspicious."
+  },
+  {
+    "id": "MED-016",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Standard transactional INSERT into the orders table with properly parameterized values. Normal e-commerce activity."
+  },
+  {
+    "id": "MED-017",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Admin creating a new service account for backup operations with appropriate group memberships during business hours."
+  },
+  {
+    "id": "MED-018",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "PowerShell script auditing Active Directory for inactive users (no login in 90 days) and exporting to CSV. This is a standard IT housekeeping task."
+  },
+  {
+    "id": "MED-019",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on port 4444, the default Metasploit handler port. This strongly suggests a reverse shell callback."
+  },
+  {
+    "id": "MED-020",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "cmd.exe spawned by Microsoft Word executing reconnaissance commands (whoami, net localgroup, ipconfig). This is a strong indicator of a malicious macro or exploit."
+  },
+  {
+    "id": "HARD-001",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Although formatted as a routine cron job, it pipes a remote script directly into bash. The internal IP 10.0.99.5 on port 8080 is not a standard update server, and piping curl to bash allows arbitrary code execution without verification."
+  },
+  {
+    "id": "HARD-002",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Despite being executed by a legitimate service account, the query selects sensitive fields (password_hash, security answers) with a tautological WHERE 1=1 clause returning all 45,000 rows. Legitimate applications never need to bulk-extract password hashes."
+  },
+  {
+    "id": "HARD-003",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Using WMI to remotely create a backdoor admin account on another host. Although executed by a deployment service account, creating users with weak passwords and adding them to administrators is not legitimate deployment behavior."
+  },
+  {
+    "id": "HARD-004",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "The www-data user (web server process) installing nmap, a network scanning tool. Web application service accounts should never install packages, especially offensive security tools."
+  },
+  {
+    "id": "HARD-005",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "While DNS-over-HTTPS to Google is normal, the consistent 450-byte POST requests every 30 seconds for 2 hours indicate a beacon pattern. Legitimate DoH queries vary in size and frequency. This is likely C2 traffic masquerading as DoH."
+  },
+  {
+    "id": "HARD-006",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "The www-data (web server) user adding an SSH authorized key to the root account. This is a privilege escalation and persistence technique\u2014a web process should never modify root's SSH keys."
+  },
+  {
+    "id": "HARD-007",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Hijacking a legitimate Windows Update scheduled task by appending an additional executable. The original task path is preserved to avoid suspicion, but a secondary payload is chained via &&."
+  },
+  {
+    "id": "HARD-008",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Using certutil as a LOLBin (Living off the Land Binary) to download a file. Despite the innocent-looking domain and filename (font file), certutil -urlcache is a well-known technique for downloading malicious payloads while evading detection."
+  },
+  {
+    "id": "HARD-009",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kerberos TGS request using RC4-HMAC encryption for the krbtgt service. Modern environments use AES256. RC4 requests for krbtgt are a hallmark of a Golden Ticket or Kerberoasting attack."
+  },
+  {
+    "id": "HARD-010",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Using rundll32 to call comsvcs.dll MiniDump function\u2014this is a known technique to dump LSASS memory (PID 624) without needing Mimikatz. The dump file can be exfiltrated and parsed offline for credentials."
+  },
+  {
+    "id": "HARD-011",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "A kernel driver being dropped into the System32 drivers directory by sc.exe. This could be a rootkit installation. Legitimate driver installations go through proper Windows installer mechanisms, not direct file creation via sc.exe."
+  },
+  {
+    "id": "HARD-012",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "API call exports 50,000 user records using a JWT token where the role claim shows 'user' but accessing an admin endpoint. The JWT may have been tampered with (alg confusion or secret compromise) to elevate privileges."
+  },
+  {
+    "id": "HARD-013",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Privileged Docker container with host PID and network namespaces downloading and executing a remote script. The --privileged flag with host namespace access enables full container escape to the host OS."
+  },
+  {
+    "id": "HARD-014",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Modifying the admin account's email address via a migration service account. This enables password reset takeover\u2014the attacker changes the recovery email, then uses 'forgot password' to gain admin access."
+  },
+  {
+    "id": "HARD-015",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "MSBuild executing a project file from the Public Documents folder, launched by explorer.exe (not Visual Studio). MSBuild is a known LOLBin for executing arbitrary C# code embedded in .csproj files to bypass application whitelisting."
+  },
+  {
+    "id": "HARD-016",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Adding pam_permit.so (which always succeeds) before the real authentication module in the SSH PAM stack. This creates a backdoor allowing any password to authenticate via SSH."
+  },
+  {
+    "id": "HARD-017",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PowerShell reading a confidential file, Base64 encoding it, and uploading to a public paste service. This is a data exfiltration technique using a legitimate web service to avoid triggering traditional DLP rules."
+  },
+  {
+    "id": "HARD-018",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Cloning the company's infrastructure repository into a hidden directory disguised as a font cache (/tmp/.cache/fonts/). The deploy user is hiding source code or infrastructure-as-code in an innocuous path for exfiltration."
+  },
+  {
+    "id": "HARD-019",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Enabling WDigest credential caching in the registry. This forces Windows to store plaintext passwords in memory, which can then be harvested by tools like Mimikatz. This setting was disabled by default for security."
+  },
+  {
+    "id": "HARD-020",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "SSH configuration weakened across three critical parameters: enabling root login, enabling password auth (from key-only), and raising max auth tries to 99. This opens the server to brute force attacks and is a common post-compromise persistence technique."
+  },
+  {
+    "id": "HARD-021",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certutil invoked by svchost.exe to verify and update the Windows root certificate trust list (AuthRoot). This is a legitimate Windows automatic root certificate update mechanism, not the -urlcache download technique used by attackers."
+  },
+  {
+    "id": "HARD-022",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Scheduled security hygiene script using stored credentials to remotely disable AD accounts with passwords older than 180 days. Despite running at 2 AM with remote sessions and credential usage, this is a standard IT security automation task with proper credential management."
+  },
+  {
+    "id": "HARD-023",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Log rotation by a dedicated log management service account that archives logs before clearing. The immediate archive event confirms this is automated log lifecycle management, not anti-forensics. The Application log (not Security) and the dedicated service account further support legitimacy."
+  },
+  {
+    "id": "HARD-024",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Scheduled vulnerability scan by the Qualys scanner appliance performing authorized port enumeration across the subnet. The User-Agent identifies the legitimate enterprise vulnerability management tool, and the scan covers standard service ports consistent with a compliance assessment."
+  },
+  {
+    "id": "HARD-025",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Application credential refresher accessing EC2 instance metadata via IMDSv2 (token-based, not the insecure v1). The dedicated process path, service account, and use of the secure metadata token endpoint indicate legitimate AWS SDK credential rotation, not SSRF exploitation."
+  },
+  {
+    "id": "ALERT-001",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard authorized SSH login by an admin user during business hours using a public key."
+  },
+  {
+    "id": "ALERT-002",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Automatic system kernel patch initiated by the root user via package manager."
+  },
+  {
+    "id": "ALERT-003",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User initiated a self-service password reset which was successfully processed by the domain controller."
+  },
+  {
+    "id": "ALERT-004",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled weekly backup job transferring large data volume to the internal backup server."
+  },
+  {
+    "id": "ALERT-005",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "A standard user encountering a broken link or typo on a harmless image resource."
+  },
+  {
+    "id": "ALERT-006",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine scheduled maintenance script running on localhost."
+  },
+  {
+    "id": "ALERT-007",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Application making a standard read request to the database for product listings."
+  },
+  {
+    "id": "ALERT-008",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote employee successfully connecting to the corporate VPN from a recognized ISP."
+  },
+  {
+    "id": "ALERT-009",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Load balancer performing a routine health check on a backend web server instance."
+  },
+  {
+    "id": "ALERT-010",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "HR employee accessing the company handbook on the file server."
+  },
+  {
+    "id": "ALERT-011",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Classic SQL injection pattern using Boolean logic to bypass authentication in the URL parameters."
+  },
+  {
+    "id": "ALERT-012",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Massive volume of SYN packets attempting to exhaust server resources (Denial of Service)."
+  },
+  {
+    "id": "ALERT-013",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting (XSS) payload attempting to inject a script tag to steal session cookies."
+  },
+  {
+    "id": "ALERT-014",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Rapid succession of failed login attempts indicating a dictionary or brute force attack."
+  },
+  {
+    "id": "ALERT-015",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with a known Command & Control (C2) IP address associated with Cobalt Strike."
+  },
+  {
+    "id": "ALERT-016",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Attacker attempting to traverse directories to access sensitive system configuration files."
+  },
+  {
+    "id": "ALERT-017",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "User logged in from Tokyo 45 minutes after logging in from New York, which is physically impossible."
+  },
+  {
+    "id": "ALERT-018",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Execution of a Base64 encoded PowerShell command (decoded: downloads payload from evil.com), a common tactic to hide malicious scripts."
+  },
+  {
+    "id": "ALERT-019",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspiciously long DNS subdomains containing what looks like chunks of data, suggesting data exfiltration via DNS protocol."
+  },
+  {
+    "id": "ALERT-020",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "A low-privileged service account suddenly adding itself to the sudoers group, indicating successful privilege escalation."
+  },
+  {
+    "id": "E-001",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container started for the database replica service."
+  },
+  {
+    "id": "E-002",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine package update of nginx-1.24.0 via apt."
+  },
+  {
+    "id": "E-003",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled queue job processing task running on localhost."
+  },
+  {
+    "id": "E-004",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote sales rep connecting via VPN from a recognized location."
+  },
+  {
+    "id": "E-005",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "IT staff accessing an incident response runbook on the file server."
+  },
+  {
+    "id": "E-006",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User mlopez changed their own password through self-service."
+  },
+  {
+    "id": "E-007",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container started for the monitoring service."
+  },
+  {
+    "id": "E-008",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote HR specialist connecting via VPN from a recognized location."
+  },
+  {
+    "id": "E-009",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container started for the monitoring service."
+  },
+  {
+    "id": "E-010",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for confirmed subscribers."
+  },
+  {
+    "id": "E-011",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard load balancer health check on /health endpoint."
+  },
+  {
+    "id": "E-012",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine SSH public key login by sysadmin during business hours."
+  },
+  {
+    "id": "E-013",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User mlopez changed their own password through self-service."
+  },
+  {
+    "id": "E-014",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled database backup task running on localhost."
+  },
+  {
+    "id": "E-015",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /api/v1/status returning a successful response."
+  },
+  {
+    "id": "E-016",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for pending order count."
+  },
+  {
+    "id": "E-017",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine package update of postgresql15-15.4 via yum."
+  },
+  {
+    "id": "E-018",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container started for the database replica service."
+  },
+  {
+    "id": "E-019",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User mlopez changed their own password through self-service."
+  },
+  {
+    "id": "E-020",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legitimate internal mail relay traffic permitted by firewall rule."
+  },
+  {
+    "id": "E-021",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Marketing employee accessing brand guidelines on the file server."
+  },
+  {
+    "id": "E-022",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Finance employee accessing a budget spreadsheet on the file server."
+  },
+  {
+    "id": "E-023",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legitimate LDAPS directory service traffic permitted by firewall rule."
+  },
+  {
+    "id": "E-024",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container started for the database replica service."
+  },
+  {
+    "id": "E-025",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /products returning a successful response."
+  },
+  {
+    "id": "E-026",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /products returning a successful response."
+  },
+  {
+    "id": "E-027",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legitimate internal mail relay traffic permitted by firewall rule."
+  },
+  {
+    "id": "E-028",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine package update of python3.11-3.11.6 via apt."
+  },
+  {
+    "id": "E-029",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /api/v1/status returning a successful response."
+  },
+  {
+    "id": "E-030",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine package update of libssl3-3.0.11 via apt."
+  },
+  {
+    "id": "E-031",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /about returning a successful response."
+  },
+  {
+    "id": "E-032",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled temp file cleanup task running on localhost."
+  },
+  {
+    "id": "E-033",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for daily audit summary."
+  },
+  {
+    "id": "E-034",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard DNS resolution for Jenkins updates."
+  },
+  {
+    "id": "E-035",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User asmith changed their own password through self-service."
+  },
+  {
+    "id": "E-036",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled log rotation task running on localhost."
+  },
+  {
+    "id": "E-037",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for published content."
+  },
+  {
+    "id": "E-038",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for published content."
+  },
+  {
+    "id": "E-039",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled database backup task running on localhost."
+  },
+  {
+    "id": "E-040",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled queue job processing task running on localhost."
+  },
+  {
+    "id": "E-041",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to / returning a successful response."
+  },
+  {
+    "id": "E-042",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote sales rep connecting via VPN from a recognized location."
+  },
+  {
+    "id": "E-043",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User lchen changed their own password through self-service."
+  },
+  {
+    "id": "E-044",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled file index update task running on localhost."
+  },
+  {
+    "id": "E-045",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Executive assistant accessing a board presentation on the file server."
+  },
+  {
+    "id": "E-046",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legitimate outbound HTTP traffic permitted by firewall rule."
+  },
+  {
+    "id": "E-047",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for published content."
+  },
+  {
+    "id": "E-048",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote HR specialist connecting via VPN from a recognized location."
+  },
+  {
+    "id": "E-049",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote HR specialist connecting via VPN from a recognized location."
+  },
+  {
+    "id": "E-050",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User lchen changed their own password through self-service."
+  },
+  {
+    "id": "E-051",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legitimate outbound HTTP traffic permitted by firewall rule."
+  },
+  {
+    "id": "E-052",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /contact returning a successful response."
+  },
+  {
+    "id": "E-053",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legitimate LDAPS directory service traffic permitted by firewall rule."
+  },
+  {
+    "id": "E-054",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "IT staff accessing an incident response runbook on the file server."
+  },
+  {
+    "id": "E-055",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine SSH public key login by webmaster during business hours."
+  },
+  {
+    "id": "E-056",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine package update of postgresql15-15.4 via yum."
+  },
+  {
+    "id": "E-057",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User nwilson changed their own password through self-service."
+  },
+  {
+    "id": "E-058",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Marketing employee accessing brand guidelines on the file server."
+  },
+  {
+    "id": "E-059",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Automated TLS certificate renewal for cdn.company.com."
+  },
+  {
+    "id": "E-060",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote support analyst connecting via VPN from a recognized location."
+  },
+  {
+    "id": "E-061",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine SSH public key login by webmaster during business hours."
+  },
+  {
+    "id": "E-062",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legitimate outbound HTTP traffic permitted by firewall rule."
+  },
+  {
+    "id": "E-063",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legitimate outbound HTTPS traffic permitted by firewall rule."
+  },
+  {
+    "id": "E-064",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard load balancer health check on /health endpoint."
+  },
+  {
+    "id": "E-065",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container stopped for the batch worker service."
+  },
+  {
+    "id": "E-066",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard DNS resolution for GitHub."
+  },
+  {
+    "id": "E-067",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User rpatel changed their own password through self-service."
+  },
+  {
+    "id": "E-068",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /api/v1/status returning a successful response."
+  },
+  {
+    "id": "E-069",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Automated TLS certificate renewal for app.company.com."
+  },
+  {
+    "id": "E-070",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legal team member accessing an NDA template on the file server."
+  },
+  {
+    "id": "E-071",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Scheduled temp file cleanup task running on localhost."
+  },
+  {
+    "id": "E-072",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard application read query for performance metrics."
+  },
+  {
+    "id": "E-073",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "User oibrahim changed their own password through self-service."
+  },
+  {
+    "id": "E-074",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /products returning a successful response."
+  },
+  {
+    "id": "E-075",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Routine container stopped for the batch worker service."
+  },
+  {
+    "id": "E-076",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to / returning a successful response."
+  },
+  {
+    "id": "E-077",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard load balancer health check on /ready endpoint."
+  },
+  {
+    "id": "E-078",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Remote sales rep connecting via VPN from a recognized location."
+  },
+  {
+    "id": "E-079",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Legal team member accessing an NDA template on the file server."
+  },
+  {
+    "id": "E-080",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Normal web request to /about returning a successful response."
+  },
+  {
+    "id": "E-081",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Automated TLS certificate renewal for portal.company.com."
+  },
+  {
+    "id": "E-082",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "HR staff accessing insurance plan details on the file server."
+  },
+  {
+    "id": "E-083",
+    "difficulty": "easy",
+    "true_label": "Benign",
+    "explanation": "Standard load balancer health check on /api/health endpoint."
+  },
+  {
+    "id": "E-084",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a backdoor disguised as an invoice at C:\\Users\\admin\\Downloads\\invoice.exe."
+  },
+  {
+    "id": "E-085",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Ransomware indicator: ransom note on admin desktop."
+  },
+  {
+    "id": "E-086",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against oracle account with 400 attempts in 50s."
+  },
+  {
+    "id": "E-087",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "External port scan from 77.247.181.162 probing 7 ports in 2s."
+  },
+  {
+    "id": "E-088",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against git account with 150 attempts in 25s."
+  },
+  {
+    "id": "E-089",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting attempt using Base64 encoded eval to redirect to malicious site."
+  },
+  {
+    "id": "E-090",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via AsyncRAT."
+  },
+  {
+    "id": "E-091",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "External port scan from 185.220.101.5 probing 9 ports in 1s."
+  },
+  {
+    "id": "E-092",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against root account with 500 attempts in 60s."
+  },
+  {
+    "id": "E-093",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SQL injection attempt using command execution via xp_cmdshell in the page parameter."
+  },
+  {
+    "id": "E-094",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SQL injection attempt using schema enumeration in the category parameter."
+  },
+  {
+    "id": "E-095",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against admin account with 200 attempts in 30s."
+  },
+  {
+    "id": "E-096",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 7500 packets/sec targeting port 8080."
+  },
+  {
+    "id": "E-097",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting attempt using iframe injection to embed a phishing page."
+  },
+  {
+    "id": "E-098",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access /etc/passwd via URL encoding."
+  },
+  {
+    "id": "E-099",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against ubuntu account with 350 attempts in 45s."
+  },
+  {
+    "id": "E-100",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via IcedID."
+  },
+  {
+    "id": "E-101",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting attempt using body event handler to beacon cookies to C2."
+  },
+  {
+    "id": "E-102",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "JSP web shell upload enabling arbitrary command execution."
+  },
+  {
+    "id": "E-103",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "External port scan from 185.220.101.5 probing 9 ports in 1s."
+  },
+  {
+    "id": "E-104",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Command injection via CGI parameter using semicolon delimiter."
+  },
+  {
+    "id": "E-105",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "XML-RPC command execution attempt."
+  },
+  {
+    "id": "E-106",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting attempt using SVG onload handler to test for XSS vulnerability."
+  },
+  {
+    "id": "E-107",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 7500 packets/sec targeting port 80."
+  },
+  {
+    "id": "E-108",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Mimikatz accessing LSASS to dump credentials from memory."
+  },
+  {
+    "id": "E-109",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access Windows SAM database."
+  },
+  {
+    "id": "E-110",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access process environment variables."
+  },
+  {
+    "id": "E-111",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via SocGholish."
+  },
+  {
+    "id": "E-112",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Ransomware indicator: recovery instructions created across shared drives."
+  },
+  {
+    "id": "E-113",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 5500 packets/sec targeting port 80."
+  },
+  {
+    "id": "E-114",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access authentication logs."
+  },
+  {
+    "id": "E-115",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Template Injection (SSTI) for command execution."
+  },
+  {
+    "id": "E-116",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "LaZagne accessing LSASS to dump credentials from memory."
+  },
+  {
+    "id": "E-117",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a rootkit DLL in ProgramData at C:\\ProgramData\\update.dll."
+  },
+  {
+    "id": "E-118",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via IcedID."
+  },
+  {
+    "id": "E-119",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Unknown credential dumper accessing LSASS to dump credentials from memory."
+  },
+  {
+    "id": "E-120",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Command injection via CGI parameter using semicolon delimiter."
+  },
+  {
+    "id": "E-121",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "LaZagne accessing LSASS to dump credentials from memory."
+  },
+  {
+    "id": "E-122",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via QakBot."
+  },
+  {
+    "id": "E-123",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a trojan masquerading as svchost at C:\\Temp\\svchost32.exe."
+  },
+  {
+    "id": "E-124",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via SocGholish."
+  },
+  {
+    "id": "E-125",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 7500 packets/sec targeting port 443."
+  },
+  {
+    "id": "E-126",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a trojan masquerading as svchost at C:\\Temp\\svchost32.exe."
+  },
+  {
+    "id": "E-127",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 8000 packets/sec targeting port 80."
+  },
+  {
+    "id": "E-128",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access process environment variables."
+  },
+  {
+    "id": "E-129",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 20000 packets/sec targeting port 443."
+  },
+  {
+    "id": "E-130",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via SocGholish."
+  },
+  {
+    "id": "E-131",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a rootkit DLL in ProgramData at C:\\ProgramData\\update.dll."
+  },
+  {
+    "id": "E-132",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting attempt using iframe injection to embed a phishing page."
+  },
+  {
+    "id": "E-133",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a rootkit DLL in ProgramData at C:\\ProgramData\\update.dll."
+  },
+  {
+    "id": "E-134",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against postgres account with 250 attempts in 40s."
+  },
+  {
+    "id": "E-135",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against ec2-user account with 180 attempts in 20s."
+  },
+  {
+    "id": "E-136",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Chained command injection downloading and executing a backdoor."
+  },
+  {
+    "id": "E-137",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Ransomware indicator: HTA ransom note with payment instructions."
+  },
+  {
+    "id": "E-138",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access /etc/passwd via URL encoding."
+  },
+  {
+    "id": "E-139",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access /etc/shadow."
+  },
+  {
+    "id": "E-140",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a backdoor disguised as an invoice at C:\\Users\\admin\\Downloads\\invoice.exe."
+  },
+  {
+    "id": "E-141",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting attempt using form action hijack to steal form submissions."
+  },
+  {
+    "id": "E-142",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "External port scan from 45.33.22.11 probing 1024 ports in 5s."
+  },
+  {
+    "id": "E-143",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a backdoor disguised as an invoice at C:\\Users\\admin\\Downloads\\invoice.exe."
+  },
+  {
+    "id": "E-144",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Ransomware indicator: recovery instructions created across shared drives."
+  },
+  {
+    "id": "E-145",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Unknown credential dumper accessing LSASS to dump credentials from memory."
+  },
+  {
+    "id": "E-146",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via SocGholish."
+  },
+  {
+    "id": "E-147",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "External port scan from 77.247.181.162 probing 7 ports in 2s."
+  },
+  {
+    "id": "E-148",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "LaZagne accessing LSASS to dump credentials from memory."
+  },
+  {
+    "id": "E-149",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of a rootkit DLL in ProgramData at C:\\ProgramData\\update.dll."
+  },
+  {
+    "id": "E-150",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against postgres account with 250 attempts in 40s."
+  },
+  {
+    "id": "E-151",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against git account with 150 attempts in 25s."
+  },
+  {
+    "id": "E-152",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Ransomware indicator: recovery instructions created across shared drives."
+  },
+  {
+    "id": "E-153",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SQL injection attempt using Boolean-based blind injection in the user parameter."
+  },
+  {
+    "id": "E-154",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SQL injection attempt using UNION-based extraction in the id parameter."
+  },
+  {
+    "id": "E-155",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Antivirus detection of Conficker worm variant at C:\\Users\\Public\\helper.scr."
+  },
+  {
+    "id": "E-156",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Ransomware indicator: HTA ransom note with payment instructions."
+  },
+  {
+    "id": "E-157",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 5500 packets/sec targeting port 8080."
+  },
+  {
+    "id": "E-158",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 25000 packets/sec targeting port 443."
+  },
+  {
+    "id": "E-159",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "JSP web shell upload enabling arbitrary command execution."
+  },
+  {
+    "id": "E-160",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "SYN flood attack at 8000 packets/sec targeting port 443."
+  },
+  {
+    "id": "E-161",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via Meterpreter."
+  },
+  {
+    "id": "E-162",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Brute force attack against ubuntu account with 350 attempts in 45s."
+  },
+  {
+    "id": "E-163",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Internal host communicating with known C2 infrastructure via AsyncRAT."
+  },
+  {
+    "id": "E-164",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Template Injection (SSTI) for command execution."
+  },
+  {
+    "id": "E-165",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Cross-Site Scripting attempt using Base64 encoded eval to redirect to malicious site."
+  },
+  {
+    "id": "E-166",
+    "difficulty": "easy",
+    "true_label": "Malicious",
+    "explanation": "Path traversal attempting to access /etc/passwd via URL encoding."
+  },
+  {
+    "id": "M-001",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "On-call engineer logging in at 2 AM during an incident response. Public key auth and the oncall username indicate this is legitimate after-hours access."
+  },
+  {
+    "id": "M-002",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "DBA performing a production database backup using pg_dump via sudo. The output path and command are consistent with routine backup procedures."
+  },
+  {
+    "id": "M-003",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline copying a versioned release artifact to production. The CI runner source, semantic versioning, and releases directory indicate a standard deployment."
+  },
+  {
+    "id": "M-004",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "User mapping a network drive to the shared file server. The explorer.exe parent and domain credentials indicate a standard user action, not automated lateral movement."
+  },
+  {
+    "id": "M-005",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "IT administrator using Azure PowerShell module to inventory VMs with managed identity authentication. This is standard cloud infrastructure management."
+  },
+  {
+    "id": "M-006",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Developer pushing code to GitHub over SSH. Port 22 to GitHub's IP with git.exe as the process is standard development workflow."
+  },
+  {
+    "id": "M-007",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Internal SRV record lookup for the domain controller. This is standard Active Directory service discovery used by domain-joined workstations."
+  },
+  {
+    "id": "M-008",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Five failed login attempts over 2 minutes from an internal IP. The slow rate and internal source suggest a user struggling with MFA or password, not an attack."
+  },
+  {
+    "id": "M-009",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "CFO sending quarterly board update to 50 board members and executives. The subject, attachment name, and business hours timing are consistent with routine executive communications."
+  },
+  {
+    "id": "M-010",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "CloudFormation stack creation using a designated deployment role from the company's S3 template bucket. This is standard Infrastructure-as-Code deployment."
+  },
+  {
+    "id": "M-011",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Direct root login at 3:45 AM using password authentication. Root SSH login should be disabled; this suggests compromised credentials and policy violation."
+  },
+  {
+    "id": "M-012",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "2.5GB uploaded to an external IP over 3 minutes on port 443. The high outbound volume to an unknown external host indicates likely data exfiltration."
+  },
+  {
+    "id": "M-013",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden admin account (trailing $) created by SYSTEM and immediately added to Domain Admins. The $ suffix hides the account from default user listings\u2014a classic backdoor technique."
+  },
+  {
+    "id": "M-014",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Service masquerading as a Chrome updater installed from Public\\Libraries running as SYSTEM. Legitimate Chrome updates use Google's signed updater from Program Files."
+  },
+  {
+    "id": "M-015",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "PowerShell downloading an executable from transfer.sh (a file sharing service) and executing it from Windows Temp. The download-and-execute pattern from a file sharing site is a common malware delivery chain."
+  },
+  {
+    "id": "M-016",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Scheduled task impersonating Google Update running a hidden PowerShell script every 15 minutes. Real Google Update uses GoogleUpdate.exe, not PowerShell scripts with bypass and hidden flags."
+  },
+  {
+    "id": "M-017",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing a DLL to the ADMIN$ share on a remote host. This is a classic lateral movement technique (PsExec-style) using administrative shares to deploy payloads."
+  },
+  {
+    "id": "M-018",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Full /16 subnet ICMP sweep from an internal host scanning 65K+ hosts in 30 seconds. The scale and speed indicate automated network reconnaissance far beyond normal activity."
+  },
+  {
+    "id": "M-019",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "High-frequency DNS TXT queries with random-looking subdomains to a suspicious domain returning NXDOMAIN. This pattern matches DNS tunneling used for data exfiltration or C2 communication."
+  },
+  {
+    "id": "M-020",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Setting cmd.exe as the debugger for sethc.exe (Sticky Keys). This is a well-known accessibility feature backdoor that provides a SYSTEM command prompt at the login screen."
+  },
+  {
+    "id": "M-021",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Automated WordPress vulnerability scanner probing known vulnerable plugin paths, user enumeration endpoints, and XML-RPC attack surface."
+  },
+  {
+    "id": "M-022",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Security log cleared by a monitoring service account with no subsequent archive event. Legitimate log rotation always archives first. The Security log (not Application) being cleared is a high-confidence anti-forensics indicator."
+  },
+  {
+    "id": "M-023",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "An intern account making the production S3 data bucket publicly readable. Setting Principal to '*' with GetObject exposes all objects to the internet\u2014either a severe misconfiguration or intentional data exposure."
+  },
+  {
+    "id": "M-024",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Long-lived outbound connection with regular 30-second beacon intervals to a non-standard port. The consistent timing pattern is characteristic of C2 implant communication."
+  },
+  {
+    "id": "M-025",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Auto-forward rule on the HR admin mailbox sending all email to an external Protonmail address. This is a classic Business Email Compromise (BEC) persistence technique to intercept sensitive HR communications."
+  },
+  {
+    "id": "M-026",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-027",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-028",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-029",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-030",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-031",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-032",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-033",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-034",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-035",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-036",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-037",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-038",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-039",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-040",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-041",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-042",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-043",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-044",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-045",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-046",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-047",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-048",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-049",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-050",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-051",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-052",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-053",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-054",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-055",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-056",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-057",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-058",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-059",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-060",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-061",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-062",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-063",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-064",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-065",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-066",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-067",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-068",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-069",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-070",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-071",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-072",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-073",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-074",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-075",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-076",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-077",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-078",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-079",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-080",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-081",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-082",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-083",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-084",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-085",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-086",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-087",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-088",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-089",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-090",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized audit role for routine cloud management."
+  },
+  {
+    "id": "M-091",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-092",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-093",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-094",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-095",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Small number of failed login attempts from an internal IP during business hours. Likely a mistyped password."
+  },
+  {
+    "id": "M-096",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-097",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-098",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Authorized administrator running a routine system command during business hours."
+  },
+  {
+    "id": "M-099",
+    "difficulty": "medium",
+    "true_label": "Benign",
+    "explanation": "Deployment pipeline transferring a versioned release artifact to production."
+  },
+  {
+    "id": "M-100",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-101",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-102",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-103",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-104",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-105",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-106",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-107",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-108",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-109",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-110",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-111",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-112",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-113",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-114",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-115",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-116",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-117",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-118",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-119",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-120",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-121",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-122",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-123",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-124",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-125",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-126",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-127",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-128",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-129",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-130",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-131",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-132",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-133",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-134",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-135",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-136",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-137",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-138",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-139",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-140",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-141",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-142",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-143",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-144",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-145",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-146",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-147",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-148",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-149",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-150",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-151",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-152",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-153",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-154",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-155",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-156",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-157",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-158",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-159",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-160",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-161",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Suspicious service installed with a name mimicking legitimate Windows services but running from a non-standard path as SYSTEM."
+  },
+  {
+    "id": "M-162",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-163",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-164",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-165",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-166",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-167",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-168",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-169",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Writing an executable to a remote host's administrative share, a classic lateral movement technique."
+  },
+  {
+    "id": "M-170",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Hidden account ($ suffix) created with administrative privileges. Hidden accounts are a persistence technique used to maintain backdoor access."
+  },
+  {
+    "id": "M-171",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-172",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "System command spawned from a suspicious parent process in an unusual location, performing evidence cleanup or log clearing."
+  },
+  {
+    "id": "M-173",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "M-174",
+    "difficulty": "medium",
+    "true_label": "Malicious",
+    "explanation": "Outbound connection to an external IP on a common reverse shell port, indicating possible C2 callback."
+  },
+  {
+    "id": "H-001",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "MSHTA spawned by Outlook executing VBScript that launches a hidden PowerShell reverse shell. This is a living-off-the-land phishing exploit chain using a legitimate Office process to evade detection."
+  },
+  {
+    "id": "H-002",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "WPAD resolution falling through to a non-authoritative response from an unexpected host. This indicates WPAD poisoning via LLMNR/NBT-NS, allowing an attacker to intercept HTTP traffic as a man-in-the-middle proxy."
+  },
+  {
+    "id": "H-003",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Privileged container mounting the entire host filesystem at /hostfs with all capabilities and AppArmor disabled. This provides full host access from within the container\u2014a container escape setup."
+  },
+  {
+    "id": "H-004",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "WScript executing a VBS file from the Temp directory, spawned by wininit.exe (a boot process that doesn't launch user scripts). The parent process spoofing indicates process injection or PPID manipulation."
+  },
+  {
+    "id": "H-005",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Terminal Services DLL path redirected from the legitimate termsrv.dll to a DLL in the Help directory. This DLL hijack provides code execution with SYSTEM privileges every time RDP service starts."
+  },
+  {
+    "id": "H-006",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Lambda function assuming the AdminFullAccess role. Legitimate Lambda functions use least-privilege roles. A Lambda assuming full admin is likely a compromised or injected function escalating privileges within the AWS environment."
+  },
+  {
+    "id": "H-007",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "svchost.exe with a mismatched file hash despite correct command line and parent process. This indicates a trojanized svchost.exe binary or process hollowing\u2014the legitimate process has been replaced with malicious code."
+  },
+  {
+    "id": "H-008",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PowerShell profile.ps1 created/modified in the system-wide profile directory. This file executes automatically every time any user launches PowerShell, providing persistent code execution. The notepad.exe parent suggests manual attacker editing."
+  },
+  {
+    "id": "H-009",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Logon Type 9 (NewCredentials/RunAs with network-only impersonation) for a domain admin account from a workstation. This is commonly used in pass-the-hash attacks where stolen NTLM hashes are used to authenticate over the network."
+  },
+  {
+    "id": "H-010",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "GraphQL mutation modifying admin email via a regular user token. The API accepted a configuration change from a non-admin token, indicating broken access control (IDOR/BOLA) in the GraphQL resolver."
+  },
+  {
+    "id": "H-011",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PowerShell AMSI bypass using reflection to set amsiInitFailed flag. The string concatenation ('Am'+'siUtils') is specifically designed to evade static detection of the AMSI tampering. This disables script-based malware scanning."
+  },
+  {
+    "id": "H-012",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PAM granting root credentials via pam_permit (always-succeed module) from an unusual internal IP. Combined with uid=33 (www-data), this shows a web server process authenticating as root through a backdoored PAM stack."
+  },
+  {
+    "id": "H-013",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Persistent WinRM connection with hourly small data transfers over 6 hours. While WinRM is legitimate, the regular interval and duration pattern from a non-admin workstation suggests an attacker maintaining persistent remote command execution."
+  },
+  {
+    "id": "H-014",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Hosts file modified to redirect Windows Update domains to an internal attacker-controlled IP. This DNS poisoning at the host level blocks security updates and can serve malicious payloads disguised as Windows updates."
+  },
+  {
+    "id": "H-015",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "CMSTP (Connection Manager Profile Installer) executing an INF file from the Public folder silently. CMSTP is a known UAC bypass LOLBin that can execute arbitrary commands with elevated privileges from INF files."
+  },
+  {
+    "id": "H-016",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL dblink extension loaded to establish a connection to an external database and relay credit card data. The app_readonly user shouldn't create extensions, and dblink enables server-side data exfiltration bypassing application-layer DLP."
+  },
+  {
+    "id": "H-017",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "CI/CD service account attaching a wildcard policy (Allow *:*) to a Lambda execution role. This privilege escalation gives the Lambda function unrestricted AWS access, likely planted by a supply chain compromise in the CI pipeline."
+  },
+  {
+    "id": "H-018",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "TLS connection to Cloudflare DNS used as a tunnel to relay traffic to a known malicious IP on port 4444. The CONNECT tunnel through a legitimate service is a domain fronting technique to hide C2 traffic."
+  },
+  {
+    "id": "H-019",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "BITSAdmin (a LOLBin) downloading a file disguised as a font from a suspicious CDN domain. BITS transfers run as background jobs and persist across reboots, making this a stealthy download-and-persist technique."
+  },
+  {
+    "id": "H-020",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ptrace PTRACE_ATTACH syscall targeting PID 1 (init/systemd) from a non-root user's custom strace binary. Attaching to PID 1 enables process memory manipulation for privilege escalation or rootkit installation."
+  },
+  {
+    "id": "H-021",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "SCCM (System Center Configuration Manager) adding a monitoring service account to Remote Desktop Users. The parent process CcmExec.exe is Microsoft's legitimate configuration management agent performing authorized group policy changes."
+  },
+  {
+    "id": "H-022",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "IT automation script checking for stopped automatic services across multiple servers using stored credentials. The server list file, reporting output, and service health focus indicate standard infrastructure monitoring."
+  },
+  {
+    "id": "H-023",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "CrowdStrike Falcon endpoint security agent being added to auto-start via MSI installer. The Program Files installation path, legitimate vendor name, and msiexec parent process confirm this is an authorized security tool deployment."
+  },
+  {
+    "id": "H-024",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Nessus vulnerability scanner performing a scheduled weekly scan across the subnet. The scan ID, standard service ports, and scanner user-agent identify this as authorized security assessment activity."
+  },
+  {
+    "id": "H-025",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Security auto-remediation bot removing a bucket policy as part of automated compliance enforcement. The dedicated security role, internal IP, and remediation-specific account indicate this is an authorized security control."
+  },
+  {
+    "id": "H-026",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Trivy container vulnerability scanner performing a nightly image scan in read-only mode. Aqua Security's Trivy is a legitimate security tool, and the read-only flag confirms no write access to the host."
+  },
+  {
+    "id": "H-027",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "CrowdStrike Falcon kernel driver being updated by its own service process. Security endpoint agents legitimately install kernel drivers for system monitoring, and the matching CrowdStrike paths confirm authenticity."
+  },
+  {
+    "id": "H-028",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Rapid7 InsightAgent local scan triggered by scheduled task. The Rapid7 installation path, scan output to ProgramData, and schtasks parent indicate an authorized endpoint security scan."
+  },
+  {
+    "id": "H-029",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Remote desktop login at 2:30 AM by a named admin account correlating with an active PagerDuty incident. The incident correlation confirms this is authorized on-call response, not unauthorized access."
+  },
+  {
+    "id": "H-030",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Active Directory housekeeping script disabling stale computer accounts and moving them to a Disabled OU. The server exclusion filter and organized OU structure indicate a well-maintained IT hygiene process."
+  },
+  {
+    "id": "H-031",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Rundll32 invoked by the driver installation framework to install USB storage driver via setupapi.dll. While rundll32 is a common LOLBin, the drvinst.exe parent and standard INF file path confirm legitimate plug-and-play driver installation."
+  },
+  {
+    "id": "H-032",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Security operations team creating an organization-wide CloudTrail with log validation enabled. This strengthens audit capabilities and is a security best practice, not an attacker action."
+  },
+  {
+    "id": "H-033",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Ansible playbook applying an iptables rule to block traffic from a subnet. The ansible-playbook parent process and Python executor confirm this is infrastructure-as-code configuration management, not manual firewall manipulation."
+  },
+  {
+    "id": "H-034",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Splunk Universal Forwarder updating its Windows Technology Add-on input configuration. The Splunk installation path and its own service process modifying its own config files is standard SIEM agent behavior."
+  },
+  {
+    "id": "H-035",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "User uploading a 1MB attachment via Outlook Web Access over TLS 1.3 to Microsoft 365. The legitimate Microsoft IP, standard MAPI endpoint, and reasonable attachment size indicate normal email activity."
+  },
+  {
+    "id": "H-036",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "H-037",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "H-038",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-039",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "H-040",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "H-041",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-042",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-043",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-044",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-045",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Malicious executable planted in a legitimate but rarely-monitored Windows subdirectory. These paths are writable by privileged users and often excluded from endpoint detection scans."
+  },
+  {
+    "id": "H-046",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-047",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "H-048",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "H-049",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Malicious executable planted in a legitimate but rarely-monitored Windows subdirectory. These paths are writable by privileged users and often excluded from endpoint detection scans."
+  },
+  {
+    "id": "H-050",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "H-051",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-052",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-053",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "H-054",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-055",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-056",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-057",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-058",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-059",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-060",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-061",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-062",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-063",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "H-064",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-065",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-066",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "H-067",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-068",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-069",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "H-070",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-071",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-072",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-073",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-074",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-075",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Malicious executable planted in a legitimate but rarely-monitored Windows subdirectory. These paths are writable by privileged users and often excluded from endpoint detection scans."
+  },
+  {
+    "id": "H-076",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-077",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-078",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Malicious executable planted in a legitimate but rarely-monitored Windows subdirectory. These paths are writable by privileged users and often excluded from endpoint detection scans."
+  },
+  {
+    "id": "H-079",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-080",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-081",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-082",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-083",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-084",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-085",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-086",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-087",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-088",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-089",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-090",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "H-091",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-092",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-093",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "H-094",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "H-095",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-096",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-097",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Malicious executable planted in a legitimate but rarely-monitored Windows subdirectory. These paths are writable by privileged users and often excluded from endpoint detection scans."
+  },
+  {
+    "id": "H-098",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "H-099",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-100",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-101",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Malicious executable planted in a legitimate but rarely-monitored Windows subdirectory. These paths are writable by privileged users and often excluded from endpoint detection scans."
+  },
+  {
+    "id": "H-102",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-103",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "H-104",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-105",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Registry persistence or credential interception technique targeting Windows authentication or logon mechanisms. The modified key enables automatic code execution during system events."
+  },
+  {
+    "id": "H-106",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-107",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-108",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-109",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-110",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-111",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-112",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-113",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-114",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Malicious executable planted in a legitimate but rarely-monitored Windows subdirectory. These paths are writable by privileged users and often excluded from endpoint detection scans."
+  },
+  {
+    "id": "H-115",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-116",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-117",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-118",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Kernel module loaded from a suspicious path (/tmp, /dev/shm, or hidden directory). Legitimate kernel modules are loaded from /lib/modules. Loading from temp directories indicates a rootkit installation."
+  },
+  {
+    "id": "H-119",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-120",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-121",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-122",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "IAM privilege escalation by a non-admin user attaching AdministratorAccess policy or creating access keys for elevated accounts. This breaks the principle of least privilege and indicates account compromise or insider threat."
+  },
+  {
+    "id": "H-123",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "LOLBin execution using a signed Windows binary to proxy execution of malicious code. This technique bypasses application whitelisting and script-based defenses."
+  },
+  {
+    "id": "H-124",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "ICMP echo replies with unusually large payloads in a regular pattern. This indicates ICMP tunneling being used for data exfiltration, as normal ICMP echo packets carry minimal data."
+  },
+  {
+    "id": "H-125",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Malicious executable planted in a legitimate but rarely-monitored Windows subdirectory. These paths are writable by privileged users and often excluded from endpoint detection scans."
+  },
+  {
+    "id": "H-126",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Malicious executable planted in a legitimate but rarely-monitored Windows subdirectory. These paths are writable by privileged users and often excluded from endpoint detection scans."
+  },
+  {
+    "id": "H-127",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-128",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "PostgreSQL privilege escalation or code execution via database-native features. The operation grants superuser access, exfiltrates credential hashes, or creates a reverse shell function\u2014none of which are legitimate application behaviors."
+  },
+  {
+    "id": "H-129",
+    "difficulty": "hard",
+    "true_label": "Malicious",
+    "explanation": "Server-Side Request Forgery (SSRF) via webhook/callback endpoint. The API is being tricked into making requests to internal admin interfaces, potentially exposing sensitive data or enabling further attacks."
+  },
+  {
+    "id": "H-130",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-131",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-132",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "H-133",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "H-134",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "H-135",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "H-136",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certbot generating a new CSR (Certificate Signing Request) for TLS certificate renewal. The standard SSL paths and certbot executor confirm legitimate certificate lifecycle management."
+  },
+  {
+    "id": "H-137",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "H-138",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-139",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Endpoint security agent quarantining or logging a detection in its own managed directory. The security vendor process writing to its own ProgramData subdirectory is standard anti-malware behavior."
+  },
+  {
+    "id": "H-140",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-141",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-142",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certbot generating a new CSR (Certificate Signing Request) for TLS certificate renewal. The standard SSL paths and certbot executor confirm legitimate certificate lifecycle management."
+  },
+  {
+    "id": "H-143",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-144",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-145",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Endpoint security agent quarantining or logging a detection in its own managed directory. The security vendor process writing to its own ProgramData subdirectory is standard anti-malware behavior."
+  },
+  {
+    "id": "H-146",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certbot generating a new CSR (Certificate Signing Request) for TLS certificate renewal. The standard SSL paths and certbot executor confirm legitimate certificate lifecycle management."
+  },
+  {
+    "id": "H-147",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certbot generating a new CSR (Certificate Signing Request) for TLS certificate renewal. The standard SSL paths and certbot executor confirm legitimate certificate lifecycle management."
+  },
+  {
+    "id": "H-148",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-149",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "H-150",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certbot generating a new CSR (Certificate Signing Request) for TLS certificate renewal. The standard SSL paths and certbot executor confirm legitimate certificate lifecycle management."
+  },
+  {
+    "id": "H-151",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certbot generating a new CSR (Certificate Signing Request) for TLS certificate renewal. The standard SSL paths and certbot executor confirm legitimate certificate lifecycle management."
+  },
+  {
+    "id": "H-152",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-153",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "H-154",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certbot generating a new CSR (Certificate Signing Request) for TLS certificate renewal. The standard SSL paths and certbot executor confirm legitimate certificate lifecycle management."
+  },
+  {
+    "id": "H-155",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-156",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "H-157",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-158",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-159",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "H-160",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Endpoint security agent quarantining or logging a detection in its own managed directory. The security vendor process writing to its own ProgramData subdirectory is standard anti-malware behavior."
+  },
+  {
+    "id": "H-161",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certbot generating a new CSR (Certificate Signing Request) for TLS certificate renewal. The standard SSL paths and certbot executor confirm legitimate certificate lifecycle management."
+  },
+  {
+    "id": "H-162",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Certbot generating a new CSR (Certificate Signing Request) for TLS certificate renewal. The standard SSL paths and certbot executor confirm legitimate certificate lifecycle management."
+  },
+  {
+    "id": "H-163",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Endpoint security agent quarantining or logging a detection in its own managed directory. The security vendor process writing to its own ProgramData subdirectory is standard anti-malware behavior."
+  },
+  {
+    "id": "H-164",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "H-165",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "H-166",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Endpoint security agent quarantining or logging a detection in its own managed directory. The security vendor process writing to its own ProgramData subdirectory is standard anti-malware behavior."
+  },
+  {
+    "id": "H-167",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Endpoint security agent quarantining or logging a detection in its own managed directory. The security vendor process writing to its own ProgramData subdirectory is standard anti-malware behavior."
+  },
+  {
+    "id": "H-168",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "H-169",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "H-170",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-171",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Enterprise management agent running system inventory commands. The management software parent process (ManageEngine/SolarWinds/Ivanti) and read-only system queries confirm this is authorized endpoint management."
+  },
+  {
+    "id": "H-172",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "H-173",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Read-only AWS API call from an authorized security/compliance audit role. The readOnly flag and dedicated audit role confirm this is routine cloud security posture assessment."
+  },
+  {
+    "id": "H-174",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  },
+  {
+    "id": "H-175",
+    "difficulty": "hard",
+    "true_label": "Benign",
+    "explanation": "Internal Elasticsearch/Kibana traffic for log aggregation and search. The standard ELK ports and internal-only communication pattern indicate legitimate SIEM or logging infrastructure."
+  }
+]

