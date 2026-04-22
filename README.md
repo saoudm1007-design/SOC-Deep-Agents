@@ -2,7 +2,6 @@
 
 Autonomous AI SOC triage agent — coordinator + 3 subagents + 10 tools. Purely agentic, no hardcoded rules. 100% accuracy on 20 alerts, 95.7% on 600. Built with LangChain Deep Agents + Chainlit.
 
-🔴 **Live Demo:** [soc.saoud.site](https://soc.saoud.site)
 
 ---
 
